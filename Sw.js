@@ -2,7 +2,7 @@
 // Caches the HTML shell so the app works offline once loaded.
 
 const CACHE_VERSION = "dsa-v1";
-const CACHE_FILES = ["./dsaSheet.html", "./manifest.json"];
+const CACHE_FILES = ["./index.html", "./manifest.json"];
 
 // Install: pre-cache the app shell
 self.addEventListener("install", (event) => {
@@ -55,7 +55,7 @@ self.addEventListener("fetch", (event) => {
           return res;
         })
         .catch(() =>
-          caches.match(req).then((c) => c || caches.match("./dsaSheet.html")),
+          caches.match(req).then((c) => c || caches.match("./index.html")),
         ),
     );
     return;
@@ -73,7 +73,7 @@ self.addEventListener("fetch", (event) => {
           caches.open(CACHE_VERSION).then((c) => c.put(req, copy));
           return res;
         })
-        .catch(() => caches.match("./dsaSheet.html"));
+        .catch(() => caches.match("./index.html"));
     }),
   );
 });

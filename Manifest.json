@@ -2,7 +2,7 @@
   "name": "DSA Coding Interview Roadmap",
   "short_name": "DSA Roadmap",
   "description": "300+ LeetCode problems organized by pattern with multi-language templates, progress tracking, spaced repetition, and offline support.",
-  "start_url": "./dsaSheet.html",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
@@ -30,12 +30,12 @@
       "name": "Random Problem",
       "short_name": "Random",
       "description": "Pick a random unsolved problem",
-      "url": "./dsaSheet.html#problems"
+      "url": "./index.html#problems"
     },
     {
       "name": "View Cheat Sheets",
       "short_name": "Cheats",
-      "url": "./dsaSheet.html#cheatsheets"
+      "url": "./index.html#cheatsheets"
     }
   ]
 }
