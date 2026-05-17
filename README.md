@@ -2,7 +2,7 @@
 
 > 300+ curated LeetCode problems organized by pattern. Multi-language code templates, progress tracking, spaced repetition, and offline support — all in a single HTML file.
 
-🔗 **Live site:** [https://yourusername.github.io/dsa-roadmap/](https://yourusername.github.io/dsa-roadmap/)
+🔗 **Live site:** [https://dharaneesh-r.github.io/dsa-roadmap/](https://dharaneesh-r.github.io/dsa-roadmap/)
 
 ---
 
@@ -132,7 +132,7 @@ That's it. The whole thing is one HTML file you can read end-to-end.
 
 ```
 dsa-roadmap/
-├── index.html        (or dsaSheet.html — the main app)
+├── index.html        (or index.html — the main app)
 ├── manifest.json     (PWA configuration)
 ├── sw.js             (service worker for offline support)
 └── README.md         (this file)
