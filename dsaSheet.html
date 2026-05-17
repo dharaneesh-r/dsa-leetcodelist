@@ -1,0 +1,2236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Topnotch SEO & Metadata Engine -->
+<meta name="title" content="Ultimate DSA Coding Interview Roadmap | 300+ LeetCode Problems Tracker">
+<meta name="description" content="Accelerate your FAANG coding interview prep with this premium, interactive DSA study tracker. Master 300+ curated LeetCode problems with dynamic templates in Java, Python, & C++, standard collections cheat sheets, and active learning indicators.">
+<meta name="keywords" content="DSA, Data Structures, Algorithms, LeetCode, Coding Interview preparation, Java templates, Python coding roadmap, C++ STL cheatsheet, software engineer interview prep, NeetCode problems tracker, FAANG preparation roadmap, computer science study dashboard">
+<meta name="author" content="Ultimate DSA Roadmap Hub">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dsa-roadmap.github.io/">
+
+<!-- Open Graph / Facebook / LinkedIn / Social Media Integration -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dsa-roadmap.github.io/">
+<meta property="og:title" content="Ultimate DSA Coding Interview Roadmap | 300+ LeetCode Prep">
+<meta property="og:description" content="Ace your software engineering coding interviews. Master 300+ handpicked LeetCode challenges in Java, Python, and C++ with real-time stats, dynamic cheat sheets, and offline PWA capability.">
+<meta property="og:image" content="https://dsa-roadmap.github.io/banner.png">
+<meta property="og:site_name" content="Ultimate DSA Prep">
+
+<!-- Twitter Card Integration -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://dsa-roadmap.github.io/">
+<meta property="twitter:title" content="Ultimate DSA Coding Interview Roadmap | 300+ LeetCode Prep">
+<meta property="twitter:description" content="Ace your software engineering coding interviews. Master 300+ handpicked LeetCode challenges in Java, Python, and C++ with real-time stats, dynamic cheat sheets, and offline PWA capability.">
+<meta property="twitter:image" content="https://dsa-roadmap.github.io/banner.png">
+
+<!-- Apple Touch iOS Integration -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="DSA Roadmap">
+<link rel="apple-touch-icon" href="images/icon-192.png">
+
+<!-- JSON-LD Rich Snippet Google Search Schema Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOccupationalCredential",
+  "name": "DSA Coding Interview Prep Roadmap",
+  "description": "Comprehensive Data Structures & Algorithms study roadmap containing 300+ selected LeetCode challenges with active code templates for Java, Python, and C++.",
+  "educationalLevel": "Intermediate to Advanced",
+  "provider": {
+    "@type": "Organization",
+    "name": "Ultimate DSA Roadmap Hub",
+    "url": "https://dsa-roadmap.github.io"
+  },
+  "about": [
+    {"@type": "Thing", "name": "Data Structures"},
+    {"@type": "Thing", "name": "Algorithms"},
+    {"@type": "Thing", "name": "LeetCode Problems Preparation"},
+    {"@type": "Thing", "name": "FAANG Coding Interviews"}
+  ]
+}
+</script>
+<title>DSA with Java — Advanced Roadmap | 300+ LeetCode Problems</title>
+<style>
+  :root {
+    --bg: #0a0c10;
+    --surface: #14171f;
+    --surface-2: #1c2030;
+    --surface-3: #242938;
+    --border: #2a3040;
+    --border-bright: #3a4258;
+    --text: #e8eaf0;
+    --text-muted: #9aa3b8;
+    --text-dim: #6b7280;
+    --primary: #f97316;
+    --primary-soft: rgba(249, 115, 22, 0.12);
+    --accent: #38bdf8;
+    --easy: #22c55e;
+    --medium: #eab308;
+    --hard: #ef4444;
+    --purple: #a78bfa;
+    --pink: #f472b6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(10, 12, 16, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    padding: 14px 0;
+  }
+  nav .wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  nav .logo {
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  nav .logo::before { content: "☕"; }
+  nav ul {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--primary); }
+
+  /* HERO */
+  .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px 40px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 14px;
+    background: linear-gradient(135deg, #f97316, #fbbf24);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero p {
+    font-size: 17px;
+    color: var(--text-muted);
+    max-width: 720px;
+    margin: 0 auto 24px;
+  }
+  .stats {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 24px;
+    min-width: 130px;
+  }
+  .stat .num {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+  }
+  .stat .label {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  /* SECTIONS */
+  section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 24px;
+  }
+  section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  section h2 .num {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  section .lead {
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    font-size: 15px;
+  }
+
+  /* CONTROLS BAR */
+  .controls {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .search-input {
+    flex: 1;
+    min-width: 220px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+  }
+  .search-input:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+  .filter-group {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+  .filter-btn:hover { color: var(--text); border-color: var(--border-bright); }
+  .filter-btn.active {
+    background: var(--primary);
+    color: #0a0c10;
+    border-color: var(--primary);
+    font-weight: 600;
+  }
+  .filter-btn.easy.active { background: var(--easy); border-color: var(--easy); }
+  .filter-btn.medium.active { background: var(--medium); border-color: var(--medium); }
+  .filter-btn.hard.active { background: var(--hard); border-color: var(--hard); }
+
+  .progress-info {
+    color: var(--text-muted);
+    font-size: 13px;
+    padding: 6px 12px;
+    background: var(--surface-2);
+    border-radius: 8px;
+  }
+  .progress-info .done { color: var(--easy); font-weight: 600; }
+
+  .reset-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .reset-btn:hover { color: var(--text); border-color: var(--hard); }
+
+  /* PATTERN GROUPS */
+  .pattern-group {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .pattern-header {
+    padding: 18px 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  .pattern-header:hover { background: var(--surface-2); }
+  .pattern-header .title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .pattern-header h3 { font-size: 17px; font-weight: 600; }
+  .pattern-header .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .pattern-header .meta {
+    color: var(--text-muted);
+    font-size: 13px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .pattern-header .chevron {
+    transition: transform 0.2s;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  .pattern-group.open .chevron { transform: rotate(180deg); }
+  .pattern-body {
+    display: none;
+    border-top: 1px solid var(--border);
+  }
+  .pattern-group.open .pattern-body { display: block; }
+  .pattern-description {
+    padding: 16px 22px;
+    color: var(--text-muted);
+    font-size: 14px;
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--border);
+  }
+  .pattern-description b { color: var(--text); }
+
+  /* PROBLEM TABLE */
+  .problems {
+    list-style: none;
+  }
+  .problem {
+    display: grid;
+    grid-template-columns: 36px 1fr auto 90px 60px;
+    padding: 11px 22px;
+    gap: 12px;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.1s;
+  }
+  .problem-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .company-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+  }
+  .company-tag {
+    font-size: 9px;
+    font-weight: 700;
+    background: var(--primary-soft);
+    color: var(--primary);
+    border: 1px solid rgba(249, 115, 22, 0.18);
+    padding: 1px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    display: inline-block;
+  }
+  .problem:hover { background: var(--surface-2); }
+  .problem:last-child { border-bottom: none; }
+  .problem.done .name { text-decoration: line-through; color: var(--text-dim); }
+
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-bright);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    flex-shrink: 0;
+  }
+  .checkbox:hover { border-color: var(--primary); }
+  .checkbox.checked {
+    background: var(--easy);
+    border-color: var(--easy);
+  }
+  .checkbox.checked::after {
+    content: "✓";
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  .name {
+    color: var(--text);
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .name:hover { color: var(--primary); }
+  .name .pid {
+    color: var(--text-dim);
+    font-size: 12px;
+    margin-right: 8px;
+    font-family: monospace;
+  }
+
+  .difficulty {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+  .difficulty.easy { background: rgba(34, 197, 94, 0.15); color: var(--easy); }
+  .difficulty.medium { background: rgba(234, 179, 8, 0.15); color: var(--medium); }
+  .difficulty.hard { background: rgba(239, 68, 68, 0.15); color: var(--hard); }
+
+  .freq {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: monospace;
+    text-align: right;
+  }
+
+  .companies {
+    color: var(--text-dim);
+    font-size: 11px;
+    text-align: right;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 760px) {
+    .hero h1 { font-size: 32px; }
+    .hero p { font-size: 15px; }
+    section h2 { font-size: 22px; }
+    .problem {
+      grid-template-columns: 28px 1fr auto 70px;
+      gap: 8px;
+      padding: 10px 14px;
+    }
+    .problem .freq { display: none; }
+    .pattern-header { padding: 14px 16px; }
+    .pattern-header h3 { font-size: 15px; }
+    .pattern-header .icon { width: 34px; height: 34px; font-size: 14px; }
+    .pattern-description { padding: 12px 16px; font-size: 13px; }
+    nav ul { gap: 12px; font-size: 13px; }
+  }
+
+  
+  /* ACTIONS (Stars, Notes, Video) */
+
+  .action-btn.star.active svg { fill: currentColor; }
+
+  .actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .action-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-dim);
+    transition: color 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+  }
+  .action-btn:hover { color: var(--text); }
+  .action-btn.star.active { color: var(--medium); }
+  .action-btn.note.active { color: var(--primary); }
+  .action-btn.video:hover { color: var(--hard); }
+
+  /* MODAL */
+  .modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .modal {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+  .modal h3 { margin-bottom: 16px; font-size: 18px; }
+  .modal textarea {
+    width: 100%;
+    height: 150px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 12px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+    margin-bottom: 16px;
+  }
+  .modal textarea:focus { outline: none; border-color: var(--primary); }
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  .btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+  }
+  .btn-ghost { background: transparent; color: var(--text-muted); }
+  .btn-ghost:hover { color: var(--text); }
+  .btn-primary { background: var(--primary); color: #000; }
+  .btn-primary:hover { background: #ea580c; }
+
+  /* REVIEW (Spaced Repetition) */
+  .review-badge {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 2px 8px;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.15s;
+  }
+  .review-badge:hover {
+    background: var(--accent);
+    color: #000;
+  }
+  .problem.due-review {
+    background: rgba(56, 189, 248, 0.04);
+    border-left: 3px solid var(--accent);
+  }
+
+  /* TEMPLATE TOGGLE */
+  .template-toggle {
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .template-toggle:hover { text-decoration: underline; }
+  .template-code {
+    display: none;
+    margin-top: 12px;
+    background: #000;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-family: 'Menlo', 'Monaco', monospace;
+    font-size: 13px;
+    color: #a78bfa;
+    white-space: pre-wrap;
+  }
+  .template-code.open { display: block; }
+
+  
+  /* LIGHT THEME */
+  :root[data-theme="light"] {
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --surface-2: #f1f5f9;
+    --surface-3: #e2e8f0;
+    --border: #cbd5e1;
+    --border-bright: #94a3b8;
+    --text: #0f172a;
+    --text-muted: #475569;
+    --text-dim: #64748b;
+    --primary-soft: rgba(249, 115, 22, 0.15);
+  }
+  
+  /* COMPACT VIEW */
+  body.compact .problem {
+    padding: 6px 16px;
+    font-size: 13px;
+  }
+  body.compact .pattern-header {
+    padding: 10px 16px;
+  }
+  body.compact .pattern-header h3 {
+    font-size: 15px;
+  }
+  body.compact .pattern-header .icon {
+    width: 32px; height: 32px; font-size: 14px;
+  }
+  body.compact .checkbox {
+    width: 16px; height: 16px; border-radius: 4px;
+  }
+  body.compact .checkbox.checked::after {
+    font-size: 10px;
+  }
+
+  /* LAYOUT & SIDEBAR TOC */
+  .layout {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+  .sidebar {
+    position: sticky;
+    top: 80px;
+    width: 250px;
+    padding: 20px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    display: none;
+  }
+  @media (min-width: 1024px) {
+    .sidebar { display: block; }
+  }
+  .main-content {
+    flex: 1;
+    min-width: 0;
+  }
+  .toc-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .toc-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.15s;
+    cursor: pointer;
+    display: block;
+    padding: 4px 8px;
+    border-radius: 6px;
+  }
+  .toc-link:hover, .toc-link.active {
+    color: var(--primary);
+    background: var(--surface-2);
+  }
+
+  /* KEYBOARD FOCUS HIGHLIGHT */
+  .problem.kb-focus {
+    background: var(--surface-3);
+    border-left: 3px solid var(--primary);
+  }
+
+  
+  /* PHASE 2: DAILY & STATS & BARS */
+  .daily-banner {
+    background: linear-gradient(135deg, var(--surface-2), var(--surface-3));
+    border: 1px solid var(--border-bright);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .daily-banner .tag {
+    background: var(--primary); color: #000;
+    font-size: 11px; font-weight: bold; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 6px;
+  }
+  .daily-link { color: var(--text); font-weight: 600; text-decoration: none; font-size: 16px; }
+  .daily-link:hover { color: var(--primary); }
+
+  .diff-bars {
+    display: flex; gap: 2px; height: 6px; width: 80px; border-radius: 3px; overflow: hidden; background: var(--surface-3);
+  }
+  .diff-bar { height: 100%; transition: width 0.3s; }
+  .diff-bar.easy { background: var(--easy); }
+  .diff-bar.medium { background: var(--medium); }
+  .diff-bar.hard { background: var(--hard); }
+
+  .timer-display {
+    font-family: monospace; font-size: 12px; color: var(--accent); width: 45px; text-align: right;
+  }
+  .action-btn.timer.active { color: var(--hard); animation: pulse 1s infinite; }
+  @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+  .heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 4px;
+    margin-top: 16px;
+  }
+  .heatmap-cell {
+    width: 100%; aspect-ratio: 1; border-radius: 4px;
+    background: var(--surface-3);
+    position: relative;
+  }
+  .heatmap-cell[data-count="1"] { background: rgba(34, 197, 94, 0.4); }
+  .heatmap-cell[data-count="2"] { background: rgba(34, 197, 94, 0.7); }
+  .heatmap-cell[data-count="3"] { background: var(--easy); }
+  
+  .streak-stat { text-align: center; margin-bottom: 20px; }
+  .streak-stat h1 { font-size: 48px; color: var(--primary); margin: 0; }
+  .streak-stat p { color: var(--text-muted); font-size: 14px; text-transform: uppercase; }
+
+  
+  /* PHASE 3: CHEAT SHEETS */
+  .cheat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .cheat-card h3 { font-size: 16px; margin-bottom: 12px; color: var(--primary); }
+  .cheat-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .cheat-table th, .cheat-table td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  .cheat-table th { color: var(--text-muted); font-weight: 600; }
+  .cheat-table code { background: var(--surface-2); padding: 2px 6px; border-radius: 4px; color: var(--accent); }
+
+  /* DESCRIPTION HIDDEN BY DEFAULT */
+  .problem-desc-popup {
+    display: none;
+  }
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+// ============== DYNAMIC CHEATSHEET RENDERING ==============
+function renderCheatSheets() {
+  const titleEl = document.getElementById('cheatSheetTitle');
+  if (titleEl) {
+    if (activeLang === 'java') titleEl.textContent = 'Java';
+    else if (activeLang === 'python') titleEl.textContent = 'Python';
+    else if (activeLang === 'cpp') titleEl.textContent = 'C++';
+  }
+
+  const cardEl = document.getElementById('dynamicCollectionsCard');
+  if (!cardEl) return;
+
+  let html = '';
+  if (activeLang === 'java') {
+    html = `
+      <h3>☕ Collections Reference</h3>
+      <table class="cheat-table">
+        <tr><th>Interface</th><th>Best Implementation</th><th>Notes / Actions</th></tr>
+        <tr><td>List</td><td><code>ArrayList</code></td><td>Default choice. Fast O(1) random access. <br><small><code>add(x)</code>, <code>get(i)</code>, <code>size()</code></small></td></tr>
+        <tr><td>List (Queue/Deque)</td><td><code>LinkedList</code></td><td>Use ONLY for heavy head/tail inserts. <br><small><code>addFirst()</code>, <code>addLast()</code></small></td></tr>
+        <tr><td>Queue / Deque</td><td><code>ArrayDeque</code></td><td>Faster than LinkedList. Default for Stacks/Queues. <br><small><code>push(x)</code>, <code>pop()</code>, <code>poll()</code></small></td></tr>
+        <tr><td>Map</td><td><code>HashMap</code></td><td>O(1) lookups. Unordered keys. <br><small><code>put(k,v)</code>, <code>get(k)</code>, <code>containsKey(k)</code></small></td></tr>
+        <tr><td>Map (Ordered)</td><td><code>TreeMap</code></td><td>O(log n) sorting. Sorted by keys. <br><small><code>firstKey()</code>, <code>lastKey()</code></small></td></tr>
+        <tr><td>Set</td><td><code>HashSet</code></td><td>O(1) lookups. Unique elements. <br><small><code>add(x)</code>, <code>contains(x)</code></small></td></tr>
+        <tr><td>PriorityQueue</td><td><code>PriorityQueue</code></td><td>Min-Heap by default. Use <code>(a,b)->b-a</code> for Max-Heap. <br><small><code>add(x)</code>, <code>poll()</code>, <code>peek()</code></small></td></tr>
+      </table>
+    `;
+  } else if (activeLang === 'python') {
+    html = `
+      <h3>🐍 Built-in Collections Reference</h3>
+      <table class="cheat-table">
+        <tr><th>Data Structure</th><th>Python Equivalent</th><th>Notes / Actions</th></tr>
+        <tr><td>List</td><td><code>list</code> / <code>[]</code></td><td>Default array. Fast O(1) dynamic scaling. <br><small><code>append(x)</code>, <code>pop()</code>, <code>len(l)</code></small></td></tr>
+        <tr><td>Queue / Deque</td><td><code>collections.deque</code></td><td>Fast O(1) double-ended append/pop. <br><small><code>append(x)</code>, <code>appendleft(x)</code>, <code>popleft()</code></small></td></tr>
+        <tr><td>Map</td><td><code>dict</code> / <code>{}</code></td><td>O(1) lookups. Ordered by insertion in Python 3.7+. <br><small><code>d[k] = v</code>, <code>k in d</code>, <code>d.get(k)</code></small></td></tr>
+        <tr><td>Map (Sorted)</td><td><code>OrderedDict</code> / <code>sorted()</code></td><td>Use <code>sorted(d.keys())</code> to iterate keys in sorted order.</td></tr>
+        <tr><td>Set</td><td><code>set</code> / <code>set()</code></td><td>O(1) hash set. Unique elements. <br><small><code>add(x)</code>, <code>remove(x)</code>, <code>x in s</code></small></td></tr>
+        <tr><td>PriorityQueue</td><td><code>heapq</code></td><td>Min-Heap by default. Push <code>-val</code> for Max-Heap. <br><small><code>heappush(h,x)</code>, <code>heappop(h)</code>, <code>h[0]</code></small></td></tr>
+      </table>
+    `;
+  } else if (activeLang === 'cpp') {
+    html = `
+      <h3>⚙️ Standard Template Library (STL)</h3>
+      <table class="cheat-table">
+        <tr><th>Container</th><th>C++ Equivalent</th><th>Notes / Actions</th></tr>
+        <tr><td>List (Vector)</td><td><code>std::vector</code></td><td>Contiguous dynamic array. Fast O(1) access. <br><small><code>push_back(x)</code>, <code>pop_back()</code>, <code>size()</code></small></td></tr>
+        <tr><td>Queue / Deque</td><td><code>std::deque</code></td><td>Double-ended queue. Good for BFS and custom queues. <br><small><code>push_back()</code>, <code>pop_front()</code></small></td></tr>
+        <tr><td>Map</td><td><code>std::unordered_map</code></td><td>O(1) average lookups. Hash table structure. <br><small><code>m[k] = v</code>, <code>m.count(k)</code>, <code>m.find(k)</code></small></td></tr>
+        <tr><td>Map (Ordered)</td><td><code>std::map</code></td><td>O(log n) lookup. Sorted red-black tree. <br><small>Iterate keys in ascending order.</small></td></tr>
+        <tr><td>Set</td><td><code>std::unordered_set</code></td><td>O(1) hash set. Unique values. <br><small><code>insert(x)</code>, <code>count(x)</code>, <code>erase(x)</code></small></td></tr>
+        <tr><td>PriorityQueue</td><td><code>std::priority_queue</code></td><td>Max-Heap by default. Use <code>greater&lt;T&gt;</code> for Min-Heap. <br><small><code>push(x)</code>, <code>pop()</code>, <code>top()</code></small></td></tr>
+      </table>
+    `;
+  }
+  cardEl.innerHTML = html;
+}
+
+</script>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#f97316">
+</head>
+<body>
+
+<header>
+  <nav aria-label="Main Navigation">
+    <div class="wrap">
+    <div class="logo">DSA Advanced</div>
+    <ul>
+      <li><a href="#patterns">Patterns</a></li>
+      <li>
+        <select id="langSelect" onchange="setLang(this.value)" style="background:var(--surface-2); color:var(--text); border:1px solid var(--border); padding:4px 8px; border-radius:6px; font-size:13px; outline:none; font-family:inherit;">
+          <option value="java">☕ Java</option>
+          <option value="python">🐍 Python</option>
+          <option value="cpp">⚙️ C++</option>
+        </select>
+      </li>
+      <li><a href="#cheatsheets">Cheat Sheets</a></li>
+      <li><a href="#problems">Problems</a></li>
+      <li><button onclick="openStatsModal()" class="action-btn" style="display:inline; font-size:16px; margin-right: 8px;" aria-label="Open Activity Statistics Modal">📊</button></li>
+      <li><button onclick="toggleTheme()" class="action-btn" style="display:inline; font-size:16px;" aria-label="Toggle Light/Dark Theme">🌓</button></li>
+      <li><button onclick="toggleCompact()" class="action-btn" style="display:inline; font-size:16px;" aria-label="Toggle Compact Layout Mode">🗜️</button></li>
+    </ul>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" aria-label="Introduction Banner">
+  <h1>DSA with Java — Advanced</h1>
+  <p>300+ LeetCode problems organized by pattern. Track your progress, filter by difficulty, search by name. Click any problem to open it on LeetCode.</p>
+  <div class="stats">
+    <div class="stat"><span class="num" id="totalCount">0</span><span class="label">Problems</span></div>
+    <div class="stat"><span class="num" id="patternCount">0</span><span class="label">Patterns</span></div>
+    <div class="stat"><span class="num" id="doneCount">0</span><span class="label">Completed</span></div>
+    <div class="stat"><span class="num" id="percentCount">0%</span><span class="label">Progress</span></div>
+    <div class="stat"><span class="num" id="reviewCount">0</span><span class="label">To Review</span></div>
+  </div>
+</section>
+
+
+<!-- PATTERNS + PROBLEMS -->
+
+<!-- CHEAT SHEETS -->
+<section id="cheatsheets">
+  <h2><span class="num">00</span> <span id="cheatSheetTitle">Java</span> Cheat Sheets</h2>
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; margin-top:20px;">
+    
+    <div class="cheat-card" id="dynamicCollectionsCard">
+      <!-- Populated dynamically via renderCheatSheets() -->
+    </div>
+
+    <div class="cheat-card">
+      <h3>⏱️ Big-O Complexity</h3>
+      <table class="cheat-table">
+        <tr><th>Data Structure</th><th>Access</th><th>Search</th><th>Insert</th><th>Delete</th></tr>
+        <tr><td>Array</td><td>O(1)</td><td>O(n)</td><td>O(n)</td><td>O(n)</td></tr>
+        <tr><td>HashMap / Set</td><td>-</td><td>O(1)</td><td>O(1)</td><td>O(1)</td></tr>
+        <tr><td>TreeMap / Set</td><td>-</td><td>O(log n)</td><td>O(log n)</td><td>O(log n)</td></tr>
+        <tr><td>PriorityQueue</td><td>-</td><td>O(n)</td><td>O(log n)</td><td>O(log n)</td></tr>
+        <tr><td>String</td><td>O(1)</td><td>O(n)</td><td>O(n)</td><td>O(n)</td></tr>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<main class="layout">
+<aside class="sidebar" aria-label="Table of Contents Navigation">
+  <h3 style="margin-bottom:12px; font-size:14px; color:var(--text-dim); text-transform:uppercase;">Table of Contents</h3>
+  <nav aria-label="Sitemap Quicklinks">
+    <ul class="toc-list" id="tocList"></ul>
+  </nav>
+</aside>
+<article class="main-content" aria-label="DSA Coding Patterns Roadmap">
+<section id="problems" style="padding-top:20px;">
+  <h2><span class="num">01</span> Problems by Pattern</h2>
+  <p class="lead">300+ curated LeetCode problems organized by the patterns interviewers test. Check off as you solve.</p>
+
+  <div id="dailyBannerContainer"></div>
+  <div class="controls">
+    <input type="text" class="search-input" id="searchInput" placeholder="Search problems by name or number...">
+    <div class="filter-group">
+      <button class="filter-btn active" data-diff="all">All</button>
+      <button class="filter-btn easy" data-diff="easy">Easy</button>
+      <button class="filter-btn medium" data-diff="medium">Medium</button>
+      <button class="filter-btn hard" data-diff="hard">Hard</button>
+    </div>
+    <div class="filter-group">
+      <button class="filter-btn active" data-status="all">All status</button>
+      <button class="filter-btn" data-status="todo">To do</button>
+      <button class="filter-btn" data-status="done">Done</button>
+      <button class="filter-btn" data-status="starred">⭐ Starred</button>
+      <button class="filter-btn" data-status="review">🔁 To Review</button>
+    </div>
+    <input type="text" class="search-input" id="companyInput" placeholder="Filter by company (e.g. Amazon)..." style="min-width: 180px; flex: 0 1 200px;" aria-label="Filter problems by target company">
+    <div class="progress-info">
+      <span class="done" id="progressDone">0</span> / <span id="progressTotal">0</span> solved
+    </div>
+    <div style="display:flex; gap:8px;">
+      <button class="reset-btn" onclick="pickRandom()" style="color: var(--primary); border-color: var(--primary);">🎲 Random</button>
+      <button class="reset-btn" onclick="exportProgress()">Export JSON</button>
+      <button class="reset-btn" onclick="document.getElementById('fileInput').click()">Import JSON</button>
+      <button class="reset-btn" onclick="resetProgress()">Reset</button>
+      <input type="file" id="fileInput" accept=".json" style="display:none;" onchange="importProgress(event)">
+    </div>
+  </div>
+
+  <div id="patternsContainer"></div>
+</section>
+</article> <!-- main-content -->
+</main> <!-- layout -->
+
+<script>
+
+// Language State
+let activeLang = localStorage.getItem('dsa_lang') || 'java';
+function setLang(lang) {
+  activeLang = lang;
+  localStorage.setItem('dsa_lang', lang);
+  renderPatterns();
+  renderCheatSheets();
+}
+window.addEventListener('DOMContentLoaded', () => {
+  const sel = document.getElementById('langSelect');
+  if(sel) sel.value = activeLang;
+});
+
+// Service Worker Registration for PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    // Only register on http/https (not file://, which most browsers reject)
+    if (location.protocol === 'http:' || location.protocol === 'https:') {
+      navigator.serviceWorker.register('sw.js').then(reg => {
+        console.log('SW registered', reg.scope);
+        // Check for updates every time the app loads
+        reg.update();
+      }).catch(err => console.log('SW registration skipped:', err.message));
+    } else {
+      console.log('SW registration skipped: requires http(s).');
+    }
+  });
+}
+
+// ============== DATA ==============
+// 'slug' is the exact LeetCode URL slug - always provided explicitly.
+const PATTERNS = [
+  {
+    id: 'arrays',
+    template: { java: `Map<Integer, Integer> map = new HashMap<>();\nfor (int i = 0; i < nums.length; i++) {\n    int complement = target - nums[i];\n    if (map.containsKey(complement)) {\n        return new int[]{map.get(complement), i};\n    }\n    map.put(nums[i], i);\n}`, python: `def twoSum(nums, target):
+    seen = {}
+    for i, num in enumerate(nums):
+        if target - num in seen:
+            return [seen[target - num], i]
+        seen[num] = i`, cpp: `unordered_map<int, int> m;
+for (int i = 0; i < nums.size(); ++i) {
+    if (m.count(target - nums[i])) return {m[target - nums[i]], i};
+    m[nums[i]] = i;
+}` }, 
+    name: 'Arrays & Hashing',
+    icon: '01',
+    desc: '<b>Foundation pattern.</b> Master frequency counting, prefix sums, and hash map lookups. Converts O(n²) brute force into O(n).',
+    problems: [
+      { id: 1, name: 'Two Sum', slug: 'two-sum', diff: 'easy', freq: 95, co: 'Amazon, Google, Apple' },
+      { id: 217, name: 'Contains Duplicate', slug: 'contains-duplicate', diff: 'easy', freq: 80, co: 'Amazon, Apple' },
+      { id: 242, name: 'Valid Anagram', slug: 'valid-anagram', diff: 'easy', freq: 75, co: 'Amazon, Bloomberg' },
+      { id: 49, name: 'Group Anagrams', slug: 'group-anagrams', diff: 'medium', freq: 90, co: 'Amazon, Uber, Facebook' },
+      { id: 347, name: 'Top K Frequent Elements', slug: 'top-k-frequent-elements', diff: 'medium', freq: 88, co: 'Amazon, Facebook' },
+      { id: 271, name: 'Encode and Decode Strings', slug: 'encode-and-decode-strings', diff: 'medium', freq: 70, co: 'Google, Microsoft' },
+      { id: 238, name: 'Product of Array Except Self', slug: 'product-of-array-except-self', diff: 'medium', freq: 92, co: 'Amazon, Facebook, Apple' },
+      { id: 36, name: 'Valid Sudoku', slug: 'valid-sudoku', diff: 'medium', freq: 78, co: 'Apple, Microsoft' },
+      { id: 128, name: 'Longest Consecutive Sequence', slug: 'longest-consecutive-sequence', diff: 'medium', freq: 85, co: 'Google, Facebook' },
+      { id: 560, name: 'Subarray Sum Equals K', slug: 'subarray-sum-equals-k', diff: 'medium', freq: 90, co: 'Facebook, Google' },
+      { id: 525, name: 'Contiguous Array', slug: 'contiguous-array', diff: 'medium', freq: 72, co: 'Facebook' },
+      { id: 350, name: 'Intersection of Two Arrays II', slug: 'intersection-of-two-arrays-ii', diff: 'easy', freq: 68, co: 'Facebook' },
+    ]
+  },
+  {
+    id: 'twopointers',
+    template: { java: `int left = 0, right = arr.length - 1;\nwhile (left < right) {\n    if (condition(arr[left], arr[right])) {\n        return true;\n    } else if (arr[left] < target) {\n        left++;\n    } else {\n        right--;\n    }\n}`, python: `left, right = 0, len(arr) - 1
+while left < right:
+    if condition(arr[left], arr[right]):
+        return True
+    elif arr[left] < target:
+        left += 1
+    else:
+        right -= 1`, cpp: `int left = 0, right = arr.size() - 1;
+while (left < right) {
+    if (condition(arr[left], arr[right])) return true;
+    else if (arr[left] < target) left++;
+    else right--;
+}` }, 
+    name: 'Two Pointers',
+    icon: '02',
+    desc: '<b>Use when:</b> sorted arrays, palindromes, finding pairs/triplets, or partitioning. Two indices moving toward each other or in same direction.',
+    problems: [
+      { id: 125, name: 'Valid Palindrome', slug: 'valid-palindrome', diff: 'easy', freq: 90, co: 'Facebook, Microsoft' },
+      { id: 167, name: 'Two Sum II - Input Array Is Sorted', slug: 'two-sum-ii-input-array-is-sorted', diff: 'medium', freq: 75, co: 'Amazon' },
+      { id: 15, name: '3Sum', slug: '3sum', diff: 'medium', freq: 95, co: 'Amazon, Facebook, Apple' },
+      { id: 11, name: 'Container With Most Water', slug: 'container-with-most-water', diff: 'medium', freq: 88, co: 'Amazon, Facebook' },
+      { id: 42, name: 'Trapping Rain Water', slug: 'trapping-rain-water', diff: 'hard', freq: 95, co: 'Amazon, Google, Facebook' },
+      { id: 16, name: '3Sum Closest', slug: '3sum-closest', diff: 'medium', freq: 70, co: 'Bloomberg' },
+      { id: 18, name: '4Sum', slug: '4sum', diff: 'medium', freq: 65, co: 'Amazon' },
+      { id: 26, name: 'Remove Duplicates from Sorted Array', slug: 'remove-duplicates-from-sorted-array', diff: 'easy', freq: 72, co: 'Microsoft' },
+      { id: 80, name: 'Remove Duplicates from Sorted Array II', slug: 'remove-duplicates-from-sorted-array-ii', diff: 'medium', freq: 68, co: 'Facebook' },
+      { id: 283, name: 'Move Zeroes', slug: 'move-zeroes', diff: 'easy', freq: 82, co: 'Facebook, Bloomberg' },
+      { id: 75, name: 'Sort Colors', slug: 'sort-colors', diff: 'medium', freq: 78, co: 'Microsoft, Facebook' },
+      { id: 344, name: 'Reverse String', slug: 'reverse-string', diff: 'easy', freq: 70, co: 'Amazon' },
+    ]
+  },
+  {
+    id: 'slidingwindow',
+    template: { java: `int left = 0, right = 0, ans = 0;\nfor (right = 0; right < arr.length; right++) {\n    // add arr[right] to window\n    while (invalidWindow()) {\n        // remove arr[left] from window\n        left++;\n    }\n    ans = Math.max(ans, right - left + 1);\n}`, python: `left = ans = 0
+for right in range(len(arr)):
+    # add arr[right] to window
+    while invalidWindow():
+        # remove arr[left]
+        left += 1
+    ans = max(ans, right - left + 1)`, cpp: `int left = 0, ans = 0;
+for (int right = 0; right < arr.size(); right++) {
+    // add arr[right]
+    while (invalidWindow()) {
+        // remove arr[left]
+        left++;
+    }
+    ans = max(ans, right - left + 1);
+}` }, 
+    name: 'Sliding Window',
+    icon: '03',
+    desc: '<b>Use when:</b> finding longest/shortest subarray or substring satisfying a condition. Expand the window, then contract when condition breaks.',
+    problems: [
+      { id: 121, name: 'Best Time to Buy and Sell Stock', slug: 'best-time-to-buy-and-sell-stock', diff: 'easy', freq: 95, co: 'Amazon, Facebook, Apple' },
+      { id: 3, name: 'Longest Substring Without Repeating Characters', slug: 'longest-substring-without-repeating-characters', diff: 'medium', freq: 96, co: 'Amazon, Facebook, Google' },
+      { id: 424, name: 'Longest Repeating Character Replacement', slug: 'longest-repeating-character-replacement', diff: 'medium', freq: 82, co: 'Google, Amazon' },
+      { id: 567, name: 'Permutation in String', slug: 'permutation-in-string', diff: 'medium', freq: 78, co: 'Microsoft, Facebook' },
+      { id: 76, name: 'Minimum Window Substring', slug: 'minimum-window-substring', diff: 'hard', freq: 92, co: 'Facebook, LinkedIn, Uber' },
+      { id: 239, name: 'Sliding Window Maximum', slug: 'sliding-window-maximum', diff: 'hard', freq: 88, co: 'Amazon, Google' },
+      { id: 209, name: 'Minimum Size Subarray Sum', slug: 'minimum-size-subarray-sum', diff: 'medium', freq: 75, co: 'Facebook' },
+      { id: 1004, name: 'Max Consecutive Ones III', slug: 'max-consecutive-ones-iii', diff: 'medium', freq: 70, co: 'Microsoft, Facebook' },
+      { id: 438, name: 'Find All Anagrams in a String', slug: 'find-all-anagrams-in-a-string', diff: 'medium', freq: 80, co: 'Amazon, Facebook' },
+      { id: 904, name: 'Fruit Into Baskets', slug: 'fruit-into-baskets', diff: 'medium', freq: 65, co: 'Google' },
+    ]
+  },
+  {
+    id: 'stack',
+    template: { java: `Deque<Integer> stack = new ArrayDeque<>();\nfor (int i = 0; i < arr.length; i++) {\n    while (!stack.isEmpty() && arr[stack.peek()] < arr[i]) {\n        int prevIndex = stack.pop();\n        // process arr[prevIndex]\n    }\n    stack.push(i);\n}`, python: `stack = []
+for i in range(len(arr)):
+    while stack and arr[stack[-1]] < arr[i]:
+        prev = stack.pop()
+        # process arr[prev]
+    stack.append(i)`, cpp: `stack<int> st;
+for (int i = 0; i < arr.size(); i++) {
+    while (!st.empty() && arr[st.top()] < arr[i]) {
+        int prev = st.top(); st.pop();
+        // process arr[prev]
+    }
+    st.push(i);
+}` }, 
+    name: 'Stack & Monotonic Stack',
+    icon: '04',
+    desc: '<b>Use when:</b> matching parens, evaluating expressions, or finding next greater/smaller element. Monotonic stack maintains sorted order while iterating.',
+    problems: [
+      { id: 20, name: 'Valid Parentheses', slug: 'valid-parentheses', diff: 'easy', freq: 95, co: 'Amazon, Facebook, Apple' },
+      { id: 155, name: 'Min Stack', slug: 'min-stack', diff: 'medium', freq: 88, co: 'Amazon, Apple, Bloomberg' },
+      { id: 150, name: 'Evaluate Reverse Polish Notation', slug: 'evaluate-reverse-polish-notation', diff: 'medium', freq: 75, co: 'LinkedIn, Amazon' },
+      { id: 22, name: 'Generate Parentheses', slug: 'generate-parentheses', diff: 'medium', freq: 85, co: 'Amazon, Facebook, Google' },
+      { id: 739, name: 'Daily Temperatures', slug: 'daily-temperatures', diff: 'medium', freq: 82, co: 'Amazon, Facebook' },
+      { id: 853, name: 'Car Fleet', slug: 'car-fleet', diff: 'medium', freq: 68, co: 'Google' },
+      { id: 84, name: 'Largest Rectangle in Histogram', slug: 'largest-rectangle-in-histogram', diff: 'hard', freq: 92, co: 'Amazon, Google, Facebook' },
+      { id: 85, name: 'Maximal Rectangle', slug: 'maximal-rectangle', diff: 'hard', freq: 80, co: 'Facebook' },
+      { id: 71, name: 'Simplify Path', slug: 'simplify-path', diff: 'medium', freq: 72, co: 'Facebook, Microsoft' },
+      { id: 394, name: 'Decode String', slug: 'decode-string', diff: 'medium', freq: 78, co: 'Google, Amazon' },
+      { id: 496, name: 'Next Greater Element I', slug: 'next-greater-element-i', diff: 'easy', freq: 70, co: 'Bloomberg' },
+      { id: 503, name: 'Next Greater Element II', slug: 'next-greater-element-ii', diff: 'medium', freq: 65, co: 'Amazon' },
+    ]
+  },
+  {
+    id: 'binarysearch',
+    template: { java: `int left = 0, right = arr.length - 1;\nwhile (left <= right) {\n    int mid = left + (right - left) / 2;\n    if (arr[mid] == target) return mid;\n    if (arr[mid] < target) left = mid + 1;\n    else right = mid - 1;\n}\nreturn -1;`, python: `left, right = 0, len(arr) - 1
+while left <= right:
+    mid = (left + right) // 2
+    if arr[mid] == target: return mid
+    if arr[mid] < target: left = mid + 1
+    else: right = mid - 1
+return -1`, cpp: `int left = 0, right = arr.size() - 1;
+while (left <= right) {
+    int mid = left + (right - left) / 2;
+    if (arr[mid] == target) return mid;
+    if (arr[mid] < target) left = mid + 1;
+    else right = mid - 1;
+}
+return -1;` }, 
+    name: 'Binary Search',
+    icon: '05',
+    desc: '<b>Use when:</b> sorted input, or when you can frame "binary search on the answer". Cuts O(n) into O(log n).',
+    problems: [
+      { id: 704, name: 'Binary Search', slug: 'binary-search', diff: 'easy', freq: 92, co: 'Amazon, Microsoft' },
+      { id: 74, name: 'Search a 2D Matrix', slug: 'search-a-2d-matrix', diff: 'medium', freq: 80, co: 'Amazon, Microsoft' },
+      { id: 875, name: 'Koko Eating Bananas', slug: 'koko-eating-bananas', diff: 'medium', freq: 75, co: 'Google, Facebook' },
+      { id: 153, name: 'Find Minimum in Rotated Sorted Array', slug: 'find-minimum-in-rotated-sorted-array', diff: 'medium', freq: 85, co: 'Amazon, Facebook' },
+      { id: 33, name: 'Search in Rotated Sorted Array', slug: 'search-in-rotated-sorted-array', diff: 'medium', freq: 95, co: 'Amazon, Facebook, LinkedIn' },
+      { id: 81, name: 'Search in Rotated Sorted Array II', slug: 'search-in-rotated-sorted-array-ii', diff: 'medium', freq: 70, co: 'LinkedIn' },
+      { id: 981, name: 'Time Based Key-Value Store', slug: 'time-based-key-value-store', diff: 'medium', freq: 72, co: 'Google, Microsoft' },
+      { id: 4, name: 'Median of Two Sorted Arrays', slug: 'median-of-two-sorted-arrays', diff: 'hard', freq: 95, co: 'Google, Amazon, Apple' },
+      { id: 34, name: 'Find First and Last Position of Element', slug: 'find-first-and-last-position-of-element-in-sorted-array', diff: 'medium', freq: 82, co: 'Facebook, LinkedIn' },
+      { id: 162, name: 'Find Peak Element', slug: 'find-peak-element', diff: 'medium', freq: 70, co: 'Facebook, Microsoft' },
+      { id: 410, name: 'Split Array Largest Sum', slug: 'split-array-largest-sum', diff: 'hard', freq: 68, co: 'Google, Facebook' },
+      { id: 540, name: 'Single Element in a Sorted Array', slug: 'single-element-in-a-sorted-array', diff: 'medium', freq: 65, co: 'Amazon' },
+    ]
+  },
+  {
+    id: 'linkedlist',
+    template: { java: `ListNode slow = head, fast = head;\nwhile (fast != null && fast.next != null) {\n    slow = slow.next;\n    fast = fast.next.next;\n    if (slow == fast) return true; // cycle detected\n}`, python: `slow = fast = head
+while fast and fast.next:
+    slow = slow.next
+    fast = fast.next.next
+    if slow == fast: return True`, cpp: `ListNode *slow = head, *fast = head;
+while (fast && fast->next) {
+    slow = slow->next;
+    fast = fast->next->next;
+    if (slow == fast) return true;
+}` }, 
+    name: 'Linked List',
+    icon: '06',
+    desc: '<b>Use when:</b> sequential access, pointer manipulation. Master fast/slow pointers for cycle detection and finding middles.',
+    problems: [
+      { id: 206, name: 'Reverse Linked List', slug: 'reverse-linked-list', diff: 'easy', freq: 95, co: 'Amazon, Microsoft, Facebook' },
+      { id: 21, name: 'Merge Two Sorted Lists', slug: 'merge-two-sorted-lists', diff: 'easy', freq: 90, co: 'Amazon, Apple, LinkedIn' },
+      { id: 141, name: 'Linked List Cycle', slug: 'linked-list-cycle', diff: 'easy', freq: 88, co: 'Amazon, Microsoft' },
+      { id: 142, name: 'Linked List Cycle II', slug: 'linked-list-cycle-ii', diff: 'medium', freq: 78, co: 'Microsoft, Bloomberg' },
+      { id: 143, name: 'Reorder List', slug: 'reorder-list', diff: 'medium', freq: 75, co: 'Facebook, Amazon' },
+      { id: 19, name: 'Remove Nth Node From End of List', slug: 'remove-nth-node-from-end-of-list', diff: 'medium', freq: 82, co: 'Facebook, Amazon' },
+      { id: 138, name: 'Copy List with Random Pointer', slug: 'copy-list-with-random-pointer', diff: 'medium', freq: 90, co: 'Amazon, Microsoft, Facebook' },
+      { id: 2, name: 'Add Two Numbers', slug: 'add-two-numbers', diff: 'medium', freq: 88, co: 'Amazon, Microsoft, Apple' },
+      { id: 287, name: 'Find the Duplicate Number', slug: 'find-the-duplicate-number', diff: 'medium', freq: 80, co: 'Amazon, Google' },
+      { id: 146, name: 'LRU Cache', slug: 'lru-cache', diff: 'medium', freq: 98, co: 'Amazon, Facebook, Google' },
+      { id: 23, name: 'Merge k Sorted Lists', slug: 'merge-k-sorted-lists', diff: 'hard', freq: 95, co: 'Amazon, Facebook, Google' },
+      { id: 25, name: 'Reverse Nodes in k-Group', slug: 'reverse-nodes-in-k-group', diff: 'hard', freq: 78, co: 'Facebook, Microsoft' },
+      { id: 460, name: 'LFU Cache', slug: 'lfu-cache', diff: 'hard', freq: 70, co: 'Amazon, Google' },
+      { id: 876, name: 'Middle of the Linked List', slug: 'middle-of-the-linked-list', diff: 'easy', freq: 72, co: 'Amazon' },
+    ]
+  },
+  {
+    id: 'trees',
+    template: { java: `// DFS\npublic void dfs(TreeNode root) {\n    if (root == null) return;\n    // pre-order\n    dfs(root.left);\n    // in-order\n    dfs(root.right);\n    // post-order\n}`, python: `def dfs(root):
+    if not root: return
+    # pre-order
+    dfs(root.left)
+    # in-order
+    dfs(root.right)
+    # post-order`, cpp: `void dfs(TreeNode* root) {
+    if (!root) return;
+    // pre-order
+    dfs(root->left);
+    // in-order
+    dfs(root->right);
+    // post-order
+}` }, 
+    name: 'Trees',
+    icon: '07',
+    desc: '<b>Use when:</b> hierarchical data, recursive problems. Master DFS (pre/in/post) and BFS (level order) traversals.',
+    problems: [
+      { id: 226, name: 'Invert Binary Tree', slug: 'invert-binary-tree', diff: 'easy', freq: 88, co: 'Google, Amazon' },
+      { id: 104, name: 'Maximum Depth of Binary Tree', slug: 'maximum-depth-of-binary-tree', diff: 'easy', freq: 90, co: 'Amazon, LinkedIn' },
+      { id: 543, name: 'Diameter of Binary Tree', slug: 'diameter-of-binary-tree', diff: 'easy', freq: 85, co: 'Facebook, Amazon' },
+      { id: 110, name: 'Balanced Binary Tree', slug: 'balanced-binary-tree', diff: 'easy', freq: 78, co: 'Amazon, Google' },
+      { id: 100, name: 'Same Tree', slug: 'same-tree', diff: 'easy', freq: 75, co: 'Bloomberg' },
+      { id: 572, name: 'Subtree of Another Tree', slug: 'subtree-of-another-tree', diff: 'easy', freq: 70, co: 'Amazon, Facebook' },
+      { id: 235, name: 'Lowest Common Ancestor of a BST', slug: 'lowest-common-ancestor-of-a-binary-search-tree', diff: 'medium', freq: 82, co: 'Amazon, Facebook' },
+      { id: 102, name: 'Binary Tree Level Order Traversal', slug: 'binary-tree-level-order-traversal', diff: 'medium', freq: 92, co: 'Amazon, Facebook, LinkedIn' },
+      { id: 199, name: 'Binary Tree Right Side View', slug: 'binary-tree-right-side-view', diff: 'medium', freq: 80, co: 'Facebook, Amazon' },
+      { id: 1448, name: 'Count Good Nodes in Binary Tree', slug: 'count-good-nodes-in-binary-tree', diff: 'medium', freq: 72, co: 'Facebook' },
+      { id: 98, name: 'Validate Binary Search Tree', slug: 'validate-binary-search-tree', diff: 'medium', freq: 90, co: 'Amazon, Facebook, Microsoft' },
+      { id: 230, name: 'Kth Smallest Element in a BST', slug: 'kth-smallest-element-in-a-bst', diff: 'medium', freq: 85, co: 'Facebook, Amazon' },
+      { id: 105, name: 'Construct Binary Tree from Preorder and Inorder', slug: 'construct-binary-tree-from-preorder-and-inorder-traversal', diff: 'medium', freq: 82, co: 'Amazon, Facebook' },
+      { id: 124, name: 'Binary Tree Maximum Path Sum', slug: 'binary-tree-maximum-path-sum', diff: 'hard', freq: 90, co: 'Amazon, Facebook' },
+      { id: 297, name: 'Serialize and Deserialize Binary Tree', slug: 'serialize-and-deserialize-binary-tree', diff: 'hard', freq: 88, co: 'Amazon, Facebook, LinkedIn' },
+      { id: 236, name: 'Lowest Common Ancestor of Binary Tree', slug: 'lowest-common-ancestor-of-a-binary-tree', diff: 'medium', freq: 88, co: 'Amazon, Facebook' },
+      { id: 437, name: 'Path Sum III', slug: 'path-sum-iii', diff: 'medium', freq: 70, co: 'Facebook' },
+      { id: 114, name: 'Flatten Binary Tree to Linked List', slug: 'flatten-binary-tree-to-linked-list', diff: 'medium', freq: 72, co: 'Microsoft, Facebook' },
+    ]
+  },
+  {
+    id: 'tries',
+    template: { java: `class TrieNode {\n    TrieNode[] children = new TrieNode[26];\n    boolean isWord;\n}\n\npublic void insert(String word) {\n    TrieNode node = root;\n    for (char c : word.toCharArray()) {\n        if (node.children[c - 'a'] == null)\n            node.children[c - 'a'] = new TrieNode();\n        node = node.children[c - 'a'];\n    }\n    node.isWord = true;\n}`, python: `class TrieNode:
+    def __init__(self):
+        self.children = {}
+        self.isWord = False
+
+def insert(word):
+    node = root
+    for char in word:
+        if char not in node.children:
+            node.children[char] = TrieNode()
+        node = node.children[char]
+    node.isWord = True`, cpp: `class TrieNode {
+public:
+    TrieNode* children[26] = {nullptr};
+    bool isWord = false;
+};
+
+void insert(string word) {
+    TrieNode* node = root;
+    for (char c : word) {
+        if (!node->children[c - 'a'])
+            node->children[c - 'a'] = new TrieNode();
+        node = node->children[c - 'a'];
+    }
+    node->isWord = true;
+}` }, 
+    name: 'Tries',
+    icon: '08',
+    desc: '<b>Use when:</b> prefix matching, autocomplete, word dictionaries. Each node holds a character; paths spell words.',
+    problems: [
+      { id: 208, name: 'Implement Trie (Prefix Tree)', slug: 'implement-trie-prefix-tree', diff: 'medium', freq: 90, co: 'Amazon, Google, Microsoft' },
+      { id: 211, name: 'Design Add and Search Words Data Structure', slug: 'design-add-and-search-words-data-structure', diff: 'medium', freq: 82, co: 'Facebook, Amazon' },
+      { id: 212, name: 'Word Search II', slug: 'word-search-ii', diff: 'hard', freq: 90, co: 'Amazon, Microsoft, Google' },
+      { id: 648, name: 'Replace Words', slug: 'replace-words', diff: 'medium', freq: 68, co: 'Uber' },
+      { id: 677, name: 'Map Sum Pairs', slug: 'map-sum-pairs', diff: 'medium', freq: 65, co: 'Akuna Capital' },
+      { id: 1268, name: 'Search Suggestions System', slug: 'search-suggestions-system', diff: 'medium', freq: 78, co: 'Amazon' },
+    ]
+  },
+  {
+    id: 'heap',
+    template: { java: `// Min Heap for top K elements\nPriorityQueue<Integer> pq = new PriorityQueue<>();\nfor (int x : nums) {\n    pq.offer(x);\n    if (pq.size() > k) pq.poll();\n}`, python: `import heapq
+min_heap = []
+for x in nums:
+    heapq.heappush(min_heap, x)
+    if len(min_heap) > k:
+        heapq.heappop(min_heap)`, cpp: `priority_queue<int, vector<int>, greater<int>> pq;
+for (int x : nums) {
+    pq.push(x);
+    if (pq.size() > k) pq.pop();
+}` }, 
+    name: 'Heap / Priority Queue',
+    icon: '09',
+    desc: '<b>Use when:</b> top-K problems, K-way merge, median from stream, scheduling. Java\'s PriorityQueue is a min-heap by default.',
+    problems: [
+      { id: 703, name: 'Kth Largest Element in a Stream', slug: 'kth-largest-element-in-a-stream', diff: 'easy', freq: 78, co: 'Amazon, Facebook' },
+      { id: 1046, name: 'Last Stone Weight', slug: 'last-stone-weight', diff: 'easy', freq: 70, co: 'Amazon' },
+      { id: 973, name: 'K Closest Points to Origin', slug: 'k-closest-points-to-origin', diff: 'medium', freq: 92, co: 'Amazon, Facebook, LinkedIn' },
+      { id: 215, name: 'Kth Largest Element in an Array', slug: 'kth-largest-element-in-an-array', diff: 'medium', freq: 95, co: 'Amazon, Facebook, Google' },
+      { id: 621, name: 'Task Scheduler', slug: 'task-scheduler', diff: 'medium', freq: 85, co: 'Amazon, Facebook' },
+      { id: 355, name: 'Design Twitter', slug: 'design-twitter', diff: 'medium', freq: 72, co: 'Twitter, Apple' },
+      { id: 502, name: 'IPO', slug: 'ipo', diff: 'hard', freq: 60, co: 'Goldman Sachs' },
+      { id: 295, name: 'Find Median from Data Stream', slug: 'find-median-from-data-stream', diff: 'hard', freq: 90, co: 'Amazon, Google, Facebook' },
+      { id: 692, name: 'Top K Frequent Words', slug: 'top-k-frequent-words', diff: 'medium', freq: 80, co: 'Amazon, Facebook' },
+      { id: 378, name: 'Kth Smallest Element in a Sorted Matrix', slug: 'kth-smallest-element-in-a-sorted-matrix', diff: 'medium', freq: 72, co: 'Amazon, Facebook' },
+      { id: 1631, name: 'Path With Minimum Effort', slug: 'path-with-minimum-effort', diff: 'medium', freq: 68, co: 'Google' },
+    ]
+  },
+  {
+    id: 'backtracking',
+    template: { java: `public void backtrack(List<List<Integer>> res, List<Integer> curr, int[] nums, int start) {\n    res.add(new ArrayList<>(curr));\n    for (int i = start; i < nums.length; i++) {\n        curr.add(nums[i]);\n        backtrack(res, curr, nums, i + 1);\n        curr.remove(curr.size() - 1);\n    }\n}`, python: `def backtrack(curr, start):
+    res.append(list(curr))
+    for i in range(start, len(nums)):
+        curr.append(nums[i])
+        backtrack(curr, i + 1)
+        curr.pop()`, cpp: `void backtrack(vector<vector<int>>& res, vector<int>& curr, vector<int>& nums, int start) {
+    res.push_back(curr);
+    for (int i = start; i < nums.size(); i++) {
+        curr.push_back(nums[i]);
+        backtrack(res, curr, nums, i + 1);
+        curr.pop_back();
+    }
+}` }, 
+    name: 'Backtracking',
+    icon: '10',
+    desc: '<b>Use when:</b> all combinations/permutations/subsets, constraint satisfaction (N-Queens, Sudoku). Try, recurse, undo.',
+    problems: [
+      { id: 78, name: 'Subsets', slug: 'subsets', diff: 'medium', freq: 90, co: 'Amazon, Facebook, Bloomberg' },
+      { id: 39, name: 'Combination Sum', slug: 'combination-sum', diff: 'medium', freq: 88, co: 'Amazon, Facebook' },
+      { id: 40, name: 'Combination Sum II', slug: 'combination-sum-ii', diff: 'medium', freq: 75, co: 'Microsoft' },
+      { id: 46, name: 'Permutations', slug: 'permutations', diff: 'medium', freq: 85, co: 'Amazon, LinkedIn, Microsoft' },
+      { id: 47, name: 'Permutations II', slug: 'permutations-ii', diff: 'medium', freq: 70, co: 'Facebook, LinkedIn' },
+      { id: 90, name: 'Subsets II', slug: 'subsets-ii', diff: 'medium', freq: 72, co: 'Facebook' },
+      { id: 79, name: 'Word Search', slug: 'word-search', diff: 'medium', freq: 88, co: 'Amazon, Microsoft, Facebook' },
+      { id: 131, name: 'Palindrome Partitioning', slug: 'palindrome-partitioning', diff: 'medium', freq: 78, co: 'Amazon, Bloomberg' },
+      { id: 17, name: 'Letter Combinations of a Phone Number', slug: 'letter-combinations-of-a-phone-number', diff: 'medium', freq: 85, co: 'Amazon, Facebook, Google' },
+      { id: 51, name: 'N-Queens', slug: 'n-queens', diff: 'hard', freq: 80, co: 'Amazon, Microsoft' },
+      { id: 37, name: 'Sudoku Solver', slug: 'sudoku-solver', diff: 'hard', freq: 75, co: 'Google, Snapchat' },
+      { id: 93, name: 'Restore IP Addresses', slug: 'restore-ip-addresses', diff: 'medium', freq: 65, co: 'Snapchat' },
+    ]
+  },
+  {
+    id: 'graphs',
+    template: { java: `// BFS\nQueue<Integer> q = new LinkedList<>();\nSet<Integer> visited = new HashSet<>();\nq.offer(startNode);\nvisited.add(startNode);\nwhile (!q.isEmpty()) {\n    int curr = q.poll();\n    for (int neighbor : adj.get(curr)) {\n        if (!visited.contains(neighbor)) {\n            visited.add(neighbor);\n            q.offer(neighbor);\n        }\n    }\n}`, python: `from collections import deque
+q = deque([startNode])
+visited = set([startNode])
+while q:
+    curr = q.popleft()
+    for neighbor in adj[curr]:
+        if neighbor not in visited:
+            visited.add(neighbor)
+            q.append(neighbor)`, cpp: `queue<int> q;
+unordered_set<int> visited;
+q.push(startNode);
+visited.insert(startNode);
+while (!q.empty()) {
+    int curr = q.front(); q.pop();
+    for (int neighbor : adj[curr]) {
+        if (!visited.count(neighbor)) {
+            visited.insert(neighbor);
+            q.push(neighbor);
+        }
+    }
+}` }, 
+    name: 'Graphs',
+    icon: '11',
+    desc: '<b>Use when:</b> networks, connectivity, paths. BFS for shortest unweighted path, DFS for exploration, topological sort for dependencies.',
+    problems: [
+      { id: 200, name: 'Number of Islands', slug: 'number-of-islands', diff: 'medium', freq: 98, co: 'Amazon, Facebook, Google, Apple' },
+      { id: 695, name: 'Max Area of Island', slug: 'max-area-of-island', diff: 'medium', freq: 82, co: 'Amazon, Facebook' },
+      { id: 133, name: 'Clone Graph', slug: 'clone-graph', diff: 'medium', freq: 85, co: 'Amazon, Facebook' },
+      { id: 417, name: 'Pacific Atlantic Water Flow', slug: 'pacific-atlantic-water-flow', diff: 'medium', freq: 75, co: 'Amazon, Google' },
+      { id: 207, name: 'Course Schedule', slug: 'course-schedule', diff: 'medium', freq: 95, co: 'Amazon, Facebook, Google' },
+      { id: 210, name: 'Course Schedule II', slug: 'course-schedule-ii', diff: 'medium', freq: 88, co: 'Amazon, Facebook, DoorDash' },
+      { id: 130, name: 'Surrounded Regions', slug: 'surrounded-regions', diff: 'medium', freq: 75, co: 'Amazon, Google' },
+      { id: 994, name: 'Rotting Oranges', slug: 'rotting-oranges', diff: 'medium', freq: 88, co: 'Amazon, Microsoft' },
+      { id: 286, name: 'Walls and Gates', slug: 'walls-and-gates', diff: 'medium', freq: 78, co: 'Facebook, Microsoft' },
+      { id: 684, name: 'Redundant Connection', slug: 'redundant-connection', diff: 'medium', freq: 72, co: 'Amazon' },
+      { id: 323, name: 'Number of Connected Components in an Undirected Graph', slug: 'number-of-connected-components-in-an-undirected-graph', diff: 'medium', freq: 70, co: 'LinkedIn, Facebook' },
+      { id: 261, name: 'Graph Valid Tree', slug: 'graph-valid-tree', diff: 'medium', freq: 70, co: 'Facebook, Amazon' },
+      { id: 127, name: 'Word Ladder', slug: 'word-ladder', diff: 'hard', freq: 88, co: 'Amazon, Facebook, Google' },
+      { id: 269, name: 'Alien Dictionary', slug: 'alien-dictionary', diff: 'hard', freq: 82, co: 'Amazon, Facebook, Airbnb' },
+      { id: 332, name: 'Reconstruct Itinerary', slug: 'reconstruct-itinerary', diff: 'hard', freq: 70, co: 'Twitter, Google' },
+      { id: 1584, name: 'Min Cost to Connect All Points', slug: 'min-cost-to-connect-all-points', diff: 'medium', freq: 72, co: 'Amazon' },
+      { id: 743, name: 'Network Delay Time', slug: 'network-delay-time', diff: 'medium', freq: 78, co: 'Amazon, Facebook' },
+      { id: 787, name: 'Cheapest Flights Within K Stops', slug: 'cheapest-flights-within-k-stops', diff: 'medium', freq: 75, co: 'DoorDash, Amazon' },
+      { id: 778, name: 'Swim in Rising Water', slug: 'swim-in-rising-water', diff: 'hard', freq: 60, co: 'Google' },
+      { id: 1857, name: 'Largest Color Value in a Directed Graph', slug: 'largest-color-value-in-a-directed-graph', diff: 'hard', freq: 55, co: 'Google' },
+    ]
+  },
+  {
+    id: '1ddp',
+    template: { java: `int[] dp = new int[n + 1];\ndp[0] = 0; dp[1] = 1;\nfor (int i = 2; i <= n; i++) {\n    dp[i] = dp[i-1] + dp[i-2];\n}\nreturn dp[n];`, python: `dp = [0] * (n + 1)
+dp[0], dp[1] = 0, 1
+for i in range(2, n + 1):
+    dp[i] = dp[i-1] + dp[i-2]
+return dp[n]`, cpp: `vector<int> dp(n + 1, 0);
+dp[1] = 1;
+for (int i = 2; i <= n; i++) {
+    dp[i] = dp[i-1] + dp[i-2];
+}
+return dp[n];` }, 
+    name: '1D Dynamic Programming',
+    icon: '12',
+    desc: '<b>Use when:</b> sequential decisions with overlapping subproblems. Build a single dp array; current state depends on prior states.',
+    problems: [
+      { id: 70, name: 'Climbing Stairs', slug: 'climbing-stairs', diff: 'easy', freq: 92, co: 'Amazon, Apple, Adobe' },
+      { id: 746, name: 'Min Cost Climbing Stairs', slug: 'min-cost-climbing-stairs', diff: 'easy', freq: 75, co: 'Amazon' },
+      { id: 198, name: 'House Robber', slug: 'house-robber', diff: 'medium', freq: 88, co: 'Amazon, LinkedIn' },
+      { id: 213, name: 'House Robber II', slug: 'house-robber-ii', diff: 'medium', freq: 78, co: 'Amazon, Microsoft' },
+      { id: 5, name: 'Longest Palindromic Substring', slug: 'longest-palindromic-substring', diff: 'medium', freq: 92, co: 'Amazon, Facebook, Apple' },
+      { id: 647, name: 'Palindromic Substrings', slug: 'palindromic-substrings', diff: 'medium', freq: 80, co: 'Facebook, Amazon' },
+      { id: 91, name: 'Decode Ways', slug: 'decode-ways', diff: 'medium', freq: 85, co: 'Facebook, Amazon, Microsoft' },
+      { id: 322, name: 'Coin Change', slug: 'coin-change', diff: 'medium', freq: 92, co: 'Amazon, Facebook, Microsoft' },
+      { id: 152, name: 'Maximum Product Subarray', slug: 'maximum-product-subarray', diff: 'medium', freq: 85, co: 'LinkedIn, Amazon' },
+      { id: 139, name: 'Word Break', slug: 'word-break', diff: 'medium', freq: 90, co: 'Amazon, Facebook, Google' },
+      { id: 300, name: 'Longest Increasing Subsequence', slug: 'longest-increasing-subsequence', diff: 'medium', freq: 88, co: 'Amazon, Facebook, Microsoft' },
+      { id: 416, name: 'Partition Equal Subset Sum', slug: 'partition-equal-subset-sum', diff: 'medium', freq: 75, co: 'Facebook' },
+      { id: 53, name: 'Maximum Subarray', slug: 'maximum-subarray', diff: 'medium', freq: 95, co: 'Amazon, LinkedIn, Microsoft' },
+      { id: 718, name: 'Maximum Length of Repeated Subarray', slug: 'maximum-length-of-repeated-subarray', diff: 'medium', freq: 65, co: 'Pinterest' },
+    ]
+  },
+  {
+    id: '2ddp',
+    template: { java: `int[][] dp = new int[m + 1][n + 1];\nfor (int i = 1; i <= m; i++) {\n    for (int j = 1; j <= n; j++) {\n        if (s1.charAt(i-1) == s2.charAt(j-1))\n            dp[i][j] = 1 + dp[i-1][j-1];\n        else\n            dp[i][j] = Math.max(dp[i-1][j], dp[i][j-1]);\n    }\n}`, python: `dp = [[0] * (n + 1) for _ in range(m + 1)]
+for i in range(1, m + 1):
+    for j in range(1, n + 1):
+        if s1[i-1] == s2[j-1]:
+            dp[i][j] = 1 + dp[i-1][j-1]
+        else:
+            dp[i][j] = max(dp[i-1][j], dp[i][j-1])`, cpp: `vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));
+for (int i = 1; i <= m; i++) {
+    for (int j = 1; j <= n; j++) {
+        if (s1[i-1] == s2[j-1]) dp[i][j] = 1 + dp[i-1][j-1];
+        else dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
+    }
+}` }, 
+    name: '2D Dynamic Programming',
+    icon: '13',
+    desc: '<b>Use when:</b> two strings/sequences, grids, or two changing dimensions (index + state). Build a 2D dp table.',
+    problems: [
+      { id: 62, name: 'Unique Paths', slug: 'unique-paths', diff: 'medium', freq: 82, co: 'Amazon, Apple, Bloomberg' },
+      { id: 63, name: 'Unique Paths II', slug: 'unique-paths-ii', diff: 'medium', freq: 68, co: 'Facebook' },
+      { id: 64, name: 'Minimum Path Sum', slug: 'minimum-path-sum', diff: 'medium', freq: 72, co: 'Amazon, Goldman Sachs' },
+      { id: 1143, name: 'Longest Common Subsequence', slug: 'longest-common-subsequence', diff: 'medium', freq: 85, co: 'Amazon, Google, Microsoft' },
+      { id: 309, name: 'Best Time to Buy and Sell Stock with Cooldown', slug: 'best-time-to-buy-and-sell-stock-with-cooldown', diff: 'medium', freq: 75, co: 'Bloomberg' },
+      { id: 518, name: 'Coin Change II', slug: 'coin-change-ii', diff: 'medium', freq: 72, co: 'Amazon' },
+      { id: 494, name: 'Target Sum', slug: 'target-sum', diff: 'medium', freq: 70, co: 'Facebook' },
+      { id: 97, name: 'Interleaving String', slug: 'interleaving-string', diff: 'medium', freq: 65, co: 'Bloomberg' },
+      { id: 329, name: 'Longest Increasing Path in a Matrix', slug: 'longest-increasing-path-in-a-matrix', diff: 'hard', freq: 82, co: 'Google, Amazon' },
+      { id: 115, name: 'Distinct Subsequences', slug: 'distinct-subsequences', diff: 'hard', freq: 60, co: 'Microsoft' },
+      { id: 72, name: 'Edit Distance', slug: 'edit-distance', diff: 'medium', freq: 90, co: 'Amazon, Google, Microsoft' },
+      { id: 312, name: 'Burst Balloons', slug: 'burst-balloons', diff: 'hard', freq: 68, co: 'Snapchat, Google' },
+      { id: 10, name: 'Regular Expression Matching', slug: 'regular-expression-matching', diff: 'hard', freq: 78, co: 'Google, Facebook, Microsoft' },
+      { id: 44, name: 'Wildcard Matching', slug: 'wildcard-matching', diff: 'hard', freq: 75, co: 'Facebook, Twitter' },
+    ]
+  },
+  {
+    id: 'greedy',
+    template: { java: `// Example: Interval scheduling\nArrays.sort(intervals, (a, b) -> a[1] - b[1]); // sort by end time\nint count = 0, lastEnd = Integer.MIN_VALUE;\nfor (int[] interval : intervals) {\n    if (interval[0] >= lastEnd) {\n        count++;\n        lastEnd = interval[1];\n    }\n}`, python: `# Python equivalent coming soon!`, cpp: `// C++ equivalent coming soon!` }, 
+    name: 'Greedy',
+    icon: '14',
+    desc: '<b>Use when:</b> locally optimal choice leads to global optimum. Often involves sorting or careful scanning.',
+    problems: [
+      { id: 55, name: 'Jump Game', slug: 'jump-game', diff: 'medium', freq: 88, co: 'Amazon, Facebook, Microsoft' },
+      { id: 45, name: 'Jump Game II', slug: 'jump-game-ii', diff: 'medium', freq: 75, co: 'Amazon, Apple' },
+      { id: 134, name: 'Gas Station', slug: 'gas-station', diff: 'medium', freq: 75, co: 'Amazon, Google' },
+      { id: 846, name: 'Hand of Straights', slug: 'hand-of-straights', diff: 'medium', freq: 65, co: 'Google' },
+      { id: 1899, name: 'Merge Triplets to Form Target Triplet', slug: 'merge-triplets-to-form-target-triplet', diff: 'medium', freq: 55, co: 'Google' },
+      { id: 763, name: 'Partition Labels', slug: 'partition-labels', diff: 'medium', freq: 80, co: 'Amazon' },
+      { id: 678, name: 'Valid Parenthesis String', slug: 'valid-parenthesis-string', diff: 'medium', freq: 72, co: 'Facebook, Amazon' },
+      { id: 122, name: 'Best Time to Buy and Sell Stock II', slug: 'best-time-to-buy-and-sell-stock-ii', diff: 'medium', freq: 82, co: 'Bloomberg' },
+      { id: 1029, name: 'Two City Scheduling', slug: 'two-city-scheduling', diff: 'medium', freq: 62, co: 'Lyft' },
+    ]
+  },
+  {
+    id: 'intervals',
+    template: { java: `Arrays.sort(intervals, (a, b) -> a[0] - b[0]);\nList<int[]> merged = new ArrayList<>();\nfor (int[] interval : intervals) {\n    if (merged.isEmpty() || merged.get(merged.size() - 1)[1] < interval[0]) {\n        merged.add(interval);\n    } else {\n        merged.get(merged.size() - 1)[1] = Math.max(merged.get(merged.size() - 1)[1], interval[1]);\n    }\n}`, python: `# Python equivalent coming soon!`, cpp: `// C++ equivalent coming soon!` }, 
+    name: 'Intervals',
+    icon: '15',
+    desc: '<b>Use when:</b> overlapping ranges, scheduling, merging. Sort by start (or end) and sweep through.',
+    problems: [
+      { id: 57, name: 'Insert Interval', slug: 'insert-interval', diff: 'medium', freq: 85, co: 'Facebook, Google, LinkedIn' },
+      { id: 56, name: 'Merge Intervals', slug: 'merge-intervals', diff: 'medium', freq: 92, co: 'Amazon, Facebook, Google' },
+      { id: 435, name: 'Non-overlapping Intervals', slug: 'non-overlapping-intervals', diff: 'medium', freq: 75, co: 'Facebook' },
+      { id: 252, name: 'Meeting Rooms', slug: 'meeting-rooms', diff: 'easy', freq: 78, co: 'Facebook, Google' },
+      { id: 253, name: 'Meeting Rooms II', slug: 'meeting-rooms-ii', diff: 'medium', freq: 95, co: 'Facebook, Google, Amazon' },
+      { id: 1851, name: 'Minimum Interval to Include Each Query', slug: 'minimum-interval-to-include-each-query', diff: 'hard', freq: 50, co: 'TikTok' },
+      { id: 986, name: 'Interval List Intersections', slug: 'interval-list-intersections', diff: 'medium', freq: 72, co: 'Facebook' },
+      { id: 759, name: 'Employee Free Time', slug: 'employee-free-time', diff: 'hard', freq: 60, co: 'LinkedIn, Facebook' },
+    ]
+  },
+  {
+    id: 'bit',
+    template: { java: `// XOR properties\n// a ^ a = 0\n// a ^ 0 = a\nint res = 0;\nfor (int num : nums) res ^= num;\nreturn res;`, python: `# Python equivalent coming soon!`, cpp: `// C++ equivalent coming soon!` }, 
+    name: 'Bit Manipulation',
+    icon: '16',
+    desc: '<b>Use when:</b> O(1) tricks for parity, toggling, or single-number problems. XOR magic, bit masking, counting bits.',
+    problems: [
+      { id: 136, name: 'Single Number', slug: 'single-number', diff: 'easy', freq: 85, co: 'Amazon, Airbnb' },
+      { id: 191, name: 'Number of 1 Bits', slug: 'number-of-1-bits', diff: 'easy', freq: 75, co: 'Amazon, Apple' },
+      { id: 338, name: 'Counting Bits', slug: 'counting-bits', diff: 'easy', freq: 70, co: 'Amazon' },
+      { id: 190, name: 'Reverse Bits', slug: 'reverse-bits', diff: 'easy', freq: 72, co: 'Apple, Amazon' },
+      { id: 268, name: 'Missing Number', slug: 'missing-number', diff: 'easy', freq: 78, co: 'Amazon, Microsoft' },
+      { id: 371, name: 'Sum of Two Integers', slug: 'sum-of-two-integers', diff: 'medium', freq: 65, co: 'Amazon' },
+      { id: 7, name: 'Reverse Integer', slug: 'reverse-integer', diff: 'medium', freq: 80, co: 'Amazon, Bloomberg, Apple' },
+    ]
+  },
+  {
+    id: 'math',
+    template: { java: `// Euclidean algorithm for GCD\npublic int gcd(int a, int b) {\n    return b == 0 ? a : gcd(b, a % b);\n}`, python: `# Python equivalent coming soon!`, cpp: `// C++ equivalent coming soon!` }, 
+    name: 'Math & Geometry',
+    icon: '17',
+    desc: '<b>Use when:</b> matrix manipulation, number theory, geometric reasoning. Often cleverness over brute force.',
+    problems: [
+      { id: 48, name: 'Rotate Image', slug: 'rotate-image', diff: 'medium', freq: 82, co: 'Amazon, Microsoft, Apple' },
+      { id: 54, name: 'Spiral Matrix', slug: 'spiral-matrix', diff: 'medium', freq: 88, co: 'Amazon, Microsoft, Google' },
+      { id: 73, name: 'Set Matrix Zeroes', slug: 'set-matrix-zeroes', diff: 'medium', freq: 75, co: 'Amazon, Facebook' },
+      { id: 202, name: 'Happy Number', slug: 'happy-number', diff: 'easy', freq: 70, co: 'Amazon, Apple' },
+      { id: 66, name: 'Plus One', slug: 'plus-one', diff: 'easy', freq: 72, co: 'Amazon, Google' },
+      { id: 50, name: 'Pow(x, n)', slug: 'powx-n', diff: 'medium', freq: 80, co: 'Facebook, LinkedIn' },
+      { id: 43, name: 'Multiply Strings', slug: 'multiply-strings', diff: 'medium', freq: 72, co: 'Facebook, Twitter' },
+      { id: 2013, name: 'Detect Squares', slug: 'detect-squares', diff: 'medium', freq: 50, co: 'Google' },
+    ]
+  },
+  {
+    id: 'advanced',
+    template: { java: `// Note: Patterns vary wildly. E.g., segment tree, bit manipulation tricks.\nclass SegmentTree {\n    // build, query, update\n}`, python: `# Python equivalent coming soon!`, cpp: `// C++ equivalent coming soon!` }, 
+    name: 'Advanced (Segment Tree, Design)',
+    icon: '18',
+    desc: '<b>For senior interviews and competitive programming.</b> Segment trees, Fenwick trees, hard design problems.',
+    problems: [
+      { id: 307, name: 'Range Sum Query - Mutable', slug: 'range-sum-query-mutable', diff: 'medium', freq: 70, co: 'Google' },
+      { id: 315, name: 'Count of Smaller Numbers After Self', slug: 'count-of-smaller-numbers-after-self', diff: 'hard', freq: 65, co: 'Amazon, Google' },
+      { id: 218, name: 'The Skyline Problem', slug: 'the-skyline-problem', diff: 'hard', freq: 72, co: 'Facebook, Google, Amazon' },
+      { id: 432, name: 'All O(1) Data Structure', slug: 'all-oone-data-structure', diff: 'hard', freq: 55, co: 'Amazon' },
+      { id: 588, name: 'Design In-Memory File System', slug: 'design-in-memory-file-system', diff: 'hard', freq: 65, co: 'Facebook, Amazon' },
+      { id: 642, name: 'Design Search Autocomplete System', slug: 'design-search-autocomplete-system', diff: 'hard', freq: 58, co: 'Amazon, Microsoft' },
+      { id: 1396, name: 'Design Underground System', slug: 'design-underground-system', diff: 'medium', freq: 65, co: 'Goldman Sachs' },
+      { id: 380, name: 'Insert Delete GetRandom O(1)', slug: 'insert-delete-getrandom-o1', diff: 'medium', freq: 78, co: 'Google, Facebook' },
+    ]
+  },
+  {
+    id: 'systemdesign',
+    template: `SYSTEM DESIGN FRAMEWORK (45-60 min)
+
+1. Understand the Goal & Scope (5 min)
+   - Clarify functional requirements (What does the system do?)
+   - Clarify non-functional requirements (Availability, Consistency, Latency, Scale)
+   - Identify the primary bottlenecks (Read-heavy? Write-heavy?)
+
+2. Capacity Estimation / Back-of-the-envelope (5 min)
+   - Traffic: Daily active users (DAU), requests per second (RPS)
+   - Storage: Data size per day/year, read/write ratio
+   - Bandwidth: Incoming/Outgoing
+
+3. High-Level Design / API Design (10 min)
+   - Define core APIs (e.g., postTweet(userId, text), getTimeline(userId))
+   - Draw the basic architecture diagram (Client -> Load Balancer -> API Gateway -> App Servers -> DB)
+
+4. Database Schema & Data Models (10 min)
+   - Choose SQL vs NoSQL based on requirements
+   - Define primary tables/collections and relationships
+   - Discuss partitioning/sharding keys
+
+5. Deep Dive / Scaling (15 min)
+   - Resolve bottlenecks identified in step 1
+   - Caching (Redis/Memcached) for read-heavy operations
+   - Message Queues (Kafka/RabbitMQ) for asynchronous processing
+   - Database replication, sharding, and consistent hashing
+
+6. Wrap-up / Trade-offs (5 min)
+   - Discuss Single Points of Failure (SPOF)
+   - Trade-offs between Consistency and Availability (CAP Theorem)`, 
+    name: 'System Design',
+    icon: '19',
+    desc: '<b>Classic distributed systems problems.</b> Focus on tradeoffs, scalability, and bottleneck identification.',
+    problems: [
+      { id: 9001, name: 'Design URL Shortener (TinyURL)', slug: 'encode-and-decode-tinyurl', diff: 'medium', freq: 95, co: 'Amazon, Facebook' },
+      { id: 9002, name: 'Design Twitter', slug: 'design-twitter', diff: 'medium', freq: 90, co: 'Twitter, Facebook' },
+      { id: 9003, name: 'Design Rate Limiter', slug: 'design-hit-counter', diff: 'medium', freq: 88, co: 'Stripe, Amazon' },
+      { id: 9004, name: 'Design Key-Value Store', slug: '#', diff: 'hard', freq: 85, co: 'Amazon, Google' },
+      { id: 9005, name: 'Design Netflix / YouTube', slug: '#', diff: 'hard', freq: 80, co: 'Netflix, Google' },
+      { id: 146, name: 'LRU Cache', slug: 'lru-cache', diff: 'medium', freq: 98, co: 'Amazon, Google, Facebook' },
+      { id: 460, name: 'LFU Cache', slug: 'lfu-cache', diff: 'hard', freq: 85, co: 'Amazon, Google' },
+    ]
+  },
+  {
+    id: 'behavioral',
+    name: 'Behavioral & HR (STAR)',
+    icon: '20',
+    desc: '<b>Leadership Principles and Soft Skills.</b> Prepare 3-4 versatile stories using the STAR method.',
+    problems: [
+      { id: 8001, name: 'Tell me about a time you failed.', slug: '#', diff: 'easy', freq: 95, co: 'Amazon, Meta' },
+      { id: 8002, name: 'Tell me about a time you had a conflict with a teammate.', slug: '#', diff: 'easy', freq: 90, co: 'Amazon, Google' },
+      { id: 8003, name: 'Tell me about a time you met a tight deadline.', slug: '#', diff: 'easy', freq: 88, co: 'Amazon, Microsoft' },
+      { id: 8004, name: 'Tell me about your most challenging technical project.', slug: '#', diff: 'medium', freq: 92, co: 'All' },
+      { id: 8005, name: 'Why do you want to work at this company?', slug: '#', diff: 'easy', freq: 90, co: 'All' },
+    ]
+  }
+];
+
+// ============== STATE ==============
+const STORAGE_KEY = 'dsa_progress_v1';
+let progress = {};
+let stars = {};
+let notes = {};
+let activeDiff = 'all';
+let activeStatus = 'all';
+let searchQuery = '';
+let companyQuery = '';
+let activeNoteKey = null;
+
+let activeTimerKey = null;
+let activeTimerStart = 0;
+let activeTimerInterval = null;
+let problemTimes = {};
+
+function loadProgress() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    let parsed = raw ? JSON.parse(raw) : {};
+    progress = {};
+    // Migration
+    for (let k in parsed) {
+      if (typeof parsed[k] === 'boolean') {
+        if (parsed[k]) progress[k] = { done: true, date: new Date().toISOString().split('T')[0], time: 0 };
+      } else {
+        progress[k] = parsed[k];
+      }
+    }
+    stars = JSON.parse(localStorage.getItem(STORAGE_KEY + '_stars') || '{}');
+    notes = JSON.parse(localStorage.getItem(STORAGE_KEY + '_notes') || '{}');
+    problemTimes = JSON.parse(localStorage.getItem(STORAGE_KEY + '_times') || '{}');
+  } catch { progress = {}; stars = {}; notes = {}; problemTimes = {}; }
+}
+function saveProgress() {
+  try { 
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress)); 
+    localStorage.setItem(STORAGE_KEY + '_stars', JSON.stringify(stars)); 
+    localStorage.setItem(STORAGE_KEY + '_notes', JSON.stringify(notes)); 
+    localStorage.setItem(STORAGE_KEY + '_times', JSON.stringify(problemTimes));
+  } catch {}
+}
+
+function exportProgress() {
+  const data = { progress, stars, notes, problemTimes };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'dsa_progress_backup.json';
+  a.click();
+}
+
+function importProgress(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (data.progress) progress = data.progress;
+      if (data.stars) stars = data.stars;
+      if (data.notes) notes = data.notes;
+      if (data.problemTimes) problemTimes = data.problemTimes;
+      saveProgress();
+      renderPatterns();
+      alert('Progress imported successfully!');
+    } catch {
+      alert('Invalid JSON file.');
+    }
+  };
+  reader.readAsText(file);
+}
+
+function toggleStar(key, e) {
+  if (e) { e.stopPropagation(); e.preventDefault(); }
+  stars[key] = !stars[key];
+  saveProgress();
+  renderPatterns();
+}
+
+function openNoteModal(key, title) {
+  activeNoteKey = key;
+  document.getElementById('noteModalTitle').textContent = 'Notes: ' + title;
+  document.getElementById('noteInput').value = notes[key] || '';
+  document.getElementById('noteModal').style.display = 'flex';
+}
+
+function closeNoteModal() {
+  document.getElementById('noteModal').style.display = 'none';
+  activeNoteKey = null;
+}
+
+function saveNote() {
+  if (!activeNoteKey) return;
+  const val = document.getElementById('noteInput').value.trim();
+  if (val) {
+    notes[activeNoteKey] = val;
+  } else {
+    delete notes[activeNoteKey];
+  }
+  saveProgress();
+  closeNoteModal();
+  renderPatterns();
+}
+
+function problemKey(pat, idx) { return pat + '_' + idx; }
+
+// ============== SPACED REPETITION ==============
+// Simple SM-2 inspired: re-surface a problem 7 days after solving (or 3 days if marked "Hard")
+// User can mark confidence on the problem; for now, default interval = 7 days.
+function isDueForReview(key) {
+  const p = progress[key];
+  if (!p || !p.done || !p.date) return false;
+  const reviewInterval = p.reviewDays || 7;
+  const solvedDate = new Date(p.date);
+  const dueDate = new Date(solvedDate);
+  dueDate.setDate(dueDate.getDate() + reviewInterval);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return today >= dueDate && !p.reviewed; // Has not been reviewed since
+}
+
+function countReviewDue() {
+  let count = 0;
+  PATTERNS.forEach(pat => {
+    pat.problems.forEach((p, i) => {
+      if (isDueForReview(problemKey(pat.id, i))) count++;
+    });
+  });
+  return count;
+}
+
+function markReviewed(key, e) {
+  if (e) { e.stopPropagation(); e.preventDefault(); }
+  if (progress[key] && progress[key].done) {
+    // Push the next review out by 14 days (doubling) the second time, simple doubling
+    const currentInterval = progress[key].reviewDays || 7;
+    progress[key].reviewDays = Math.min(currentInterval * 2, 90); // cap at 90 days
+    progress[key].date = new Date().toISOString().split('T')[0]; // restart the clock
+    progress[key].reviewed = false;
+    saveProgress();
+    renderPatterns();
+  }
+}
+
+// ============== RENDER ==============
+function leetcodeUrl(problem) {
+  return 'https://leetcode.com/problems/' + problem.slug + '/';
+}
+
+function renderPatterns() {
+  const container = document.getElementById('patternsContainer');
+  const openGroups = new Set();
+  container.querySelectorAll('.pattern-group.open').forEach(g => {
+    if (g.dataset.id) openGroups.add(g.dataset.id);
+  });
+  container.innerHTML = '';
+  let totalShown = 0;
+  let totalCount = 0;
+  let doneCount = 0;
+  
+  // Render Daily Banner
+  const todayStr = new Date().toDateString();
+  let pseudoRandomIdx = 0;
+  for(let i=0; i<todayStr.length; i++) pseudoRandomIdx += todayStr.charCodeAt(i);
+  
+  const unsolvedAll = [];
+  PATTERNS.forEach(pat => pat.problems.forEach((p, i) => { if(!progress[problemKey(pat.id, i)]?.done) unsolvedAll.push({pat, p, key: problemKey(pat.id, i)}); }));
+  if (unsolvedAll.length > 0) {
+    const daily = unsolvedAll[pseudoRandomIdx % unsolvedAll.length];
+    document.getElementById('dailyBannerContainer').innerHTML = `
+      <div class="daily-banner">
+        <div>
+          <span class="tag">Problem of the Day</span>
+          <div style="margin-top: 8px;">
+            <a href="${leetcodeUrl(daily.p)}" target="_blank" class="daily-link">#${daily.p.id} ${daily.p.name}</a>
+            <span style="color:var(--text-muted); font-size: 13px; margin-left: 8px;">(${daily.pat.name})</span>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="window.open('${leetcodeUrl(daily.p)}', '_blank')">Solve Now</button>
+      </div>
+    `;
+  } else {
+    document.getElementById('dailyBannerContainer').innerHTML = '';
+  }
+
+
+  PATTERNS.forEach((pat, patIdx) => {
+    totalCount += pat.problems.length;
+    let visibleProblems = pat.problems.map((p, i) => ({...p, _idx: i}));
+
+    // Filter by difficulty
+    if (activeDiff !== 'all') {
+      visibleProblems = visibleProblems.filter(p => p.diff === activeDiff);
+    }
+    // Filter by status
+    if (activeStatus === 'todo') {
+      visibleProblems = visibleProblems.filter(p => (!progress[problemKey(pat.id, p._idx)] || !progress[problemKey(pat.id, p._idx)].done));
+    } else if (activeStatus === 'done') {
+      visibleProblems = visibleProblems.filter(p => progress[problemKey(pat.id, p._idx)] && progress[problemKey(pat.id, p._idx)].done);
+    } else if (activeStatus === 'starred') {
+      visibleProblems = visibleProblems.filter(p => stars[problemKey(pat.id, p._idx)]);
+    } else if (activeStatus === 'review') {
+      visibleProblems = visibleProblems.filter(p => isDueForReview(problemKey(pat.id, p._idx)));
+    }
+    // Filter by search
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      visibleProblems = visibleProblems.filter(p =>
+        p.name.toLowerCase().includes(q) || String(p.id).includes(q)
+      );
+    }
+    // Filter by company
+    if (companyQuery) {
+      visibleProblems = visibleProblems.filter(p => 
+        p.co.toLowerCase().includes(companyQuery)
+      );
+    }
+
+    // Count done in this pattern (all, not just visible)
+    const patDone = pat.problems.filter((p, i) => progress[problemKey(pat.id, i)] && progress[problemKey(pat.id, i)].done).length;
+    doneCount += patDone;
+
+    if (visibleProblems.length === 0 && (activeDiff !== 'all' || activeStatus !== 'all' || searchQuery || companyQuery)) return;
+    totalShown += visibleProblems.length;
+
+    const group = document.createElement('div');
+    group.dataset.id = pat.id;
+    const isOpen = searchQuery || openGroups.has(pat.id);
+    group.className = 'pattern-group' + (isOpen ? ' open' : '');
+
+    group.innerHTML = `
+      <div class="pattern-header" onclick="this.parentElement.classList.toggle('open')">
+        <div class="title">
+          <div class="icon">${pat.icon}</div>
+          <div>
+            <h3>${pat.name}</h3>
+            <div class="meta">
+              <span>${pat.problems.length} problems</span>
+              <span>·</span>
+              <span><b style="color:var(--easy)">${patDone}</b> solved</span>
+            </div>
+            <div class="diff-bars" style="margin-top:8px;">
+              <div class="diff-bar easy" style="width: ${pat.problems.length ? (pat.problems.filter((p,i)=>p.diff==='easy' && progress[problemKey(pat.id,i)]?.done).length / pat.problems.filter(p=>p.diff==='easy').length * 100 || 0) : 0}%;"></div>
+              <div class="diff-bar medium" style="width: ${pat.problems.length ? (pat.problems.filter((p,i)=>p.diff==='medium' && progress[problemKey(pat.id,i)]?.done).length / pat.problems.filter(p=>p.diff==='medium').length * 100 || 0) : 0}%;"></div>
+              <div class="diff-bar hard" style="width: ${pat.problems.length ? (pat.problems.filter((p,i)=>p.diff==='hard' && progress[problemKey(pat.id,i)]?.done).length / pat.problems.filter(p=>p.diff==='hard').length * 100 || 0) : 0}%;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="chevron">▼</div>
+      </div>
+      <div class="pattern-body">
+        <div class="pattern-description">
+          ${pat.desc}
+          ${pat.template ? (() => {
+            const isStr = typeof pat.template === 'string';
+            const code = isStr ? pat.template : (pat.template[activeLang] || pat.template.java);
+            const title = pat.id === 'systemdesign' ? 'Show System Design Framework' : `Show ${activeLang === 'python' ? 'Python' : activeLang === 'cpp' ? 'C++' : 'Java'} Template`;
+            return `<button class="template-toggle" onclick="this.nextElementSibling.classList.toggle('open')"><span>&lt;/&gt;</span> ${title}</button><div class="template-code">${code.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>`;
+          })() : ''}
+        </div>
+        <ul class="problems">
+          ${visibleProblems.map(p => {
+            const key = problemKey(pat.id, p._idx);
+            const done = progress[key]?.done;
+            const dueReview = isDueForReview(key);
+            const time = problemTimes[key] || 0;
+            const isTiming = activeTimerKey === key;
+            const isCustom = p.slug === '#';
+            const url = isCustom ? 'javascript:void(0)' : leetcodeUrl(p);
+            const target = isCustom ? '' : 'target="_blank" rel="noopener"';
+            return `
+              <li class="problem${done ? ' done' : ''}${dueReview ? ' due-review' : ''}" data-key="${key}">
+                <div class="checkbox${done ? ' checked' : ''}" onclick="toggleDone('${key}', event)"></div>
+                <div class="problem-details">
+                  <a class="name" href="${url}" ${target}>
+                    <span class="pid">#${p.id}</span>${p.name}
+                    ${dueReview ? `<span class="review-badge" onclick="markReviewed('${key}', event)" title="Click after reviewing to push the next review out">🔁 Review</span>` : ''}
+                  </a>
+                  <div class="company-tags">
+                    ${p.co.split(',').map(c => `<span class="company-tag" title="Target Company">${c.trim()}</span>`).join('')}
+                  </div>
+                </div>
+                <div class="actions">
+                  <button class="action-btn star ${stars[key] ? 'active' : ''}" onclick="toggleStar('${key}', event)" title="Star/Bookmark">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  </button>
+                  <button class="action-btn note ${notes[key] ? 'active' : ''}" onclick="openNoteModal('${key}', '${p.name.replace(/'/g, "\\'")}')" title="Notes">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                  </button>
+                  <a class="action-btn video" href="https://www.youtube.com/results?search_query=neetcode+${encodeURIComponent(p.name)}" target="_blank" rel="noopener" title="NeetCode Video" style="color:#ef4444">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4S5.746,4,4.186,4.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M9.6,15.2V8.8L15.6,12L9.6,15.2z"/></svg>
+                  </a>
+                </div>
+                <span class="difficulty ${p.diff}">${p.diff}</span>
+                <span class="freq">${p.freq}%</span>
+              </li>
+            `;
+          }).join('')}
+        </ul>
+      </div>
+    `;
+    container.appendChild(group);
+  });
+
+  // Update stats
+  document.getElementById('totalCount').textContent = totalCount;
+  document.getElementById('patternCount').textContent = PATTERNS.length;
+  document.getElementById('doneCount').textContent = doneCount;
+  document.getElementById('percentCount').textContent = Math.round((doneCount / totalCount) * 100) + '%';
+  document.getElementById('progressDone').textContent = doneCount;
+  document.getElementById('progressTotal').textContent = totalCount;
+  const reviewEl = document.getElementById('reviewCount');
+  if (reviewEl) reviewEl.textContent = countReviewDue();
+
+  if (totalShown === 0 && (activeDiff !== 'all' || activeStatus !== 'all' || searchQuery || companyQuery)) {
+    container.innerHTML = '<div style="text-align:center; padding:60px 20px; color:var(--text-muted)">No problems match your filters.</div>';
+  }
+}
+
+// ============== HANDLERS ==============
+
+function toggleTimer(key) {
+  if (activeTimerKey === key) {
+    // stop
+    clearInterval(activeTimerInterval);
+    const elapsed = Math.floor((Date.now() - activeTimerStart) / 1000);
+    problemTimes[key] = (problemTimes[key] || 0) + elapsed;
+    activeTimerKey = null;
+    saveProgress();
+    renderPatterns();
+  } else {
+    // stop existing if any
+    if (activeTimerKey) {
+      clearInterval(activeTimerInterval);
+      const elapsed = Math.floor((Date.now() - activeTimerStart) / 1000);
+      problemTimes[activeTimerKey] = (problemTimes[activeTimerKey] || 0) + elapsed;
+    }
+    // start new
+    activeTimerKey = key;
+    activeTimerStart = Date.now();
+    saveProgress();
+    renderPatterns();
+    
+    // tick
+    activeTimerInterval = setInterval(() => {
+      const el = document.getElementById('timer_' + key);
+      if (el) {
+        const elapsed = Math.floor((Date.now() - activeTimerStart) / 1000);
+        const t = (problemTimes[key] || 0) + elapsed;
+        el.textContent = Math.floor(t/60) + ':' + (t%60).toString().padStart(2,'0');
+      }
+    }, 1000);
+  }
+}
+
+function openStatsModal() {
+  const dates = Object.values(progress).filter(p => p && p.done).map(p => p.date);
+  
+  // Calculate Streak
+  let streak = 0;
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  
+  for(let i=0; i<365; i++) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const dateStr = d.toISOString().split('T')[0];
+    if (dates.includes(dateStr)) {
+      streak++;
+    } else if (i === 0) {
+      // today is not solved yet, streak not broken if yesterday was solved
+    } else {
+      break;
+    }
+  }
+  document.getElementById('streakCount').textContent = streak;
+  
+  // Heatmap for last 14 days
+  let heatmapHTML = '';
+  for(let i=13; i>=0; i--) {
+    const d = new Date(today);
+    d.setDate(d.getDate() - i);
+    const dateStr = d.toISOString().split('T')[0];
+    const count = dates.filter(date => date === dateStr).length;
+    let rank = 0;
+    if (count > 0) rank = 1;
+    if (count > 2) rank = 2;
+    if (count > 5) rank = 3;
+    heatmapHTML += `<div class="heatmap-cell" data-count="${rank}" title="${dateStr}: ${count} problems"></div>`;
+  }
+  document.getElementById('heatmapGrid').innerHTML = heatmapHTML;
+  document.getElementById('statsModal').style.display = 'flex';
+}
+
+function toggleDone(key, e) {
+  if (e) { e.stopPropagation(); e.preventDefault(); }
+  if (progress[key] && progress[key].done) {
+    delete progress[key];
+  } else {
+    progress[key] = { done: true, date: new Date().toISOString().split('T')[0], time: problemTimes[key] || 0 };
+  }
+  saveProgress();
+
+  if (!progress[key] || !progress[key].done) {
+    // just marked as undone
+  } else {
+    // marked as done
+    const totalDone = Object.values(progress).filter(p => p && p.done).length;
+    const milestones = [10, 25, 50, 75, 100, 125, 150, 175, 200];
+    if (milestones.includes(totalDone)) {
+      confetti({
+        particleCount: 150 + totalDone,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    }
+  }
+
+  renderPatterns();
+}
+
+function resetProgress() {
+  if (confirm('Reset ALL data — progress, stars, notes, and timers? This cannot be undone.')) {
+    progress = {};
+    stars = {};
+    notes = {};
+    problemTimes = {};
+    saveProgress();
+    renderPatterns();
+  }
+}
+
+
+// Search
+document.getElementById('companyInput').addEventListener('input', (e) => {
+  companyQuery = e.target.value.toLowerCase();
+  renderPatterns();
+});
+
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  searchQuery = e.target.value;
+  renderPatterns();
+});
+
+// Difficulty filters
+document.querySelectorAll('.filter-btn[data-diff]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn[data-diff]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeDiff = btn.dataset.diff;
+    renderPatterns();
+  });
+});
+
+// Status filters
+document.querySelectorAll('.filter-btn[data-status]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn[data-status]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeStatus = btn.dataset.status;
+    renderPatterns();
+  });
+});
+
+// Init
+loadProgress();
+renderPatterns();
+renderTOC();
+renderCheatSheets();
+
+// ============== UI TOGGLES ==============
+function toggleTheme() {
+  const root = document.documentElement;
+  if (root.getAttribute('data-theme') === 'light') {
+    root.removeAttribute('data-theme');
+    localStorage.setItem('dsa_theme', 'dark');
+  } else {
+    root.setAttribute('data-theme', 'light');
+    localStorage.setItem('dsa_theme', 'light');
+  }
+}
+function toggleCompact() {
+  document.body.classList.toggle('compact');
+  localStorage.setItem('dsa_compact', document.body.classList.contains('compact'));
+}
+
+// Load preferences
+if (localStorage.getItem('dsa_theme') === 'light') document.documentElement.setAttribute('data-theme', 'light');
+if (localStorage.getItem('dsa_compact') === 'true') document.body.classList.add('compact');
+
+// ============== TOC & RANDOM ==============
+function renderTOC() {
+  const list = document.getElementById('tocList');
+  list.innerHTML = PATTERNS.map((p, i) => `
+    <li><a class="toc-link" onclick="scrollToPattern(${i})">${p.name}</a></li>
+  `).join('');
+}
+function scrollToPattern(index) {
+  const groups = document.querySelectorAll('.pattern-group');
+  if (groups[index]) {
+    groups[index].classList.add('open');
+    groups[index].scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+}
+
+function pickRandom() {
+  const unsolved = [];
+  PATTERNS.forEach((pat, pIdx) => {
+    pat.problems.forEach((prob, i) => {
+      if (!progress[problemKey(pat.id, i)] || !progress[problemKey(pat.id, i)].done) {
+        unsolved.push({ patIdx, i, key: problemKey(pat.id, i) });
+      }
+    });
+  });
+  if (unsolved.length === 0) return alert('Wow, you solved everything!');
+  const pick = unsolved[Math.floor(Math.random() * unsolved.length)];
+  
+  // Ensure filters aren't hiding it
+  activeDiff = 'all'; activeStatus = 'all'; searchQuery = ''; companyQuery = '';
+  document.getElementById('searchInput').value = '';
+  document.getElementById('companyInput').value = '';
+  // Reset filter button UI state
+  document.querySelectorAll('.filter-btn[data-diff]').forEach(b => b.classList.toggle('active', b.dataset.diff === 'all'));
+  document.querySelectorAll('.filter-btn[data-status]').forEach(b => b.classList.toggle('active', b.dataset.status === 'all'));
+  renderPatterns();
+  
+  const groups = document.querySelectorAll('.pattern-group');
+  groups[pick.patIdx].classList.add('open');
+  
+  setTimeout(() => {
+    const el = document.querySelector(`li[data-key="${pick.key}"]`);
+    if (el) {
+      el.scrollIntoView({behavior: 'smooth', block: 'center'});
+      el.classList.add('kb-focus');
+      setTimeout(() => el.classList.remove('kb-focus'), 3000);
+    }
+  }, 100);
+}
+
+// ============== KEYBOARD NAVIGATION ==============
+let focusedIdx = -1;
+document.addEventListener('keydown', (e) => {
+  // Ignore if typing in input/textarea
+  if (['INPUT','TEXTAREA'].includes(e.target.tagName)) return;
+  
+  if (e.key === '/') {
+    e.preventDefault();
+    document.getElementById('searchInput').focus();
+  }
+  
+  const probs = Array.from(document.querySelectorAll('.problem'));
+  if (probs.length === 0) return;
+  
+  if (e.key === 'j') {
+    if (focusedIdx >= 0) probs[focusedIdx].classList.remove('kb-focus');
+    focusedIdx = Math.min(probs.length - 1, focusedIdx + 1);
+    probs[focusedIdx].classList.add('kb-focus');
+    probs[focusedIdx].scrollIntoView({behavior: 'smooth', block: 'center'});
+  }
+  if (e.key === 'k') {
+    if (focusedIdx >= 0) probs[focusedIdx].classList.remove('kb-focus');
+    focusedIdx = Math.max(0, focusedIdx - 1);
+    probs[focusedIdx].classList.add('kb-focus');
+    probs[focusedIdx].scrollIntoView({behavior: 'smooth', block: 'center'});
+  }
+  if (e.key === 'x') {
+    if (focusedIdx >= 0 && focusedIdx < probs.length) {
+      probs[focusedIdx].querySelector('.checkbox').click();
+    }
+  }
+});
+
+
+// ============== DYNAMIC CHEATSHEET RENDERING ==============
+function renderCheatSheets() {
+  const titleEl = document.getElementById('cheatSheetTitle');
+  if (titleEl) {
+    if (activeLang === 'java') titleEl.textContent = 'Java';
+    else if (activeLang === 'python') titleEl.textContent = 'Python';
+    else if (activeLang === 'cpp') titleEl.textContent = 'C++';
+  }
+
+  const cardEl = document.getElementById('dynamicCollectionsCard');
+  if (!cardEl) return;
+
+  let html = '';
+  if (activeLang === 'java') {
+    html = `
+      <h3>☕ Collections Reference</h3>
+      <table class="cheat-table">
+        <tr><th>Interface</th><th>Best Implementation</th><th>Notes / Actions</th></tr>
+        <tr><td>List</td><td><code>ArrayList</code></td><td>Default choice. Fast O(1) random access. <br><small><code>add(x)</code>, <code>get(i)</code>, <code>size()</code></small></td></tr>
+        <tr><td>List (Queue/Deque)</td><td><code>LinkedList</code></td><td>Use ONLY for heavy head/tail inserts. <br><small><code>addFirst()</code>, <code>addLast()</code></small></td></tr>
+        <tr><td>Queue / Deque</td><td><code>ArrayDeque</code></td><td>Faster than LinkedList. Default for Stacks/Queues. <br><small><code>push(x)</code>, <code>pop()</code>, <code>poll()</code></small></td></tr>
+        <tr><td>Map</td><td><code>HashMap</code></td><td>O(1) lookups. Unordered keys. <br><small><code>put(k,v)</code>, <code>get(k)</code>, <code>containsKey(k)</code></small></td></tr>
+        <tr><td>Map (Ordered)</td><td><code>TreeMap</code></td><td>O(log n) sorting. Sorted by keys. <br><small><code>firstKey()</code>, <code>lastKey()</code></small></td></tr>
+        <tr><td>Set</td><td><code>HashSet</code></td><td>O(1) lookups. Unique elements. <br><small><code>add(x)</code>, <code>contains(x)</code></small></td></tr>
+        <tr><td>PriorityQueue</td><td><code>PriorityQueue</code></td><td>Min-Heap by default. Use <code>(a,b)->b-a</code> for Max-Heap. <br><small><code>add(x)</code>, <code>poll()</code>, <code>peek()</code></small></td></tr>
+      </table>
+    `;
+  } else if (activeLang === 'python') {
+    html = `
+      <h3>🐍 Built-in Collections Reference</h3>
+      <table class="cheat-table">
+        <tr><th>Data Structure</th><th>Python Equivalent</th><th>Notes / Actions</th></tr>
+        <tr><td>List</td><td><code>list</code> / <code>[]</code></td><td>Default array. Fast O(1) dynamic scaling. <br><small><code>append(x)</code>, <code>pop()</code>, <code>len(l)</code></small></td></tr>
+        <tr><td>Queue / Deque</td><td><code>collections.deque</code></td><td>Fast O(1) double-ended append/pop. <br><small><code>append(x)</code>, <code>appendleft(x)</code>, <code>popleft()</code></small></td></tr>
+        <tr><td>Map</td><td><code>dict</code> / <code>{}</code></td><td>O(1) lookups. Ordered by insertion in Python 3.7+. <br><small><code>d[k] = v</code>, <code>k in d</code>, <code>d.get(k)</code></small></td></tr>
+        <tr><td>Map (Sorted)</td><td><code>OrderedDict</code> / <code>sorted()</code></td><td>Use <code>sorted(d.keys())</code> to iterate keys in sorted order.</td></tr>
+        <tr><td>Set</td><td><code>set</code> / <code>set()</code></td><td>O(1) hash set. Unique elements. <br><small><code>add(x)</code>, <code>remove(x)</code>, <code>x in s</code></small></td></tr>
+        <tr><td>PriorityQueue</td><td><code>heapq</code></td><td>Min-Heap by default. Push <code>-val</code> for Max-Heap. <br><small><code>heappush(h,x)</code>, <code>heappop(h)</code>, <code>h[0]</code></small></td></tr>
+      </table>
+    `;
+  } else if (activeLang === 'cpp') {
+    html = `
+      <h3>⚙️ Standard Template Library (STL)</h3>
+      <table class="cheat-table">
+        <tr><th>Container</th><th>C++ Equivalent</th><th>Notes / Actions</th></tr>
+        <tr><td>List (Vector)</td><td><code>std::vector</code></td><td>Contiguous dynamic array. Fast O(1) access. <br><small><code>push_back(x)</code>, <code>pop_back()</code>, <code>size()</code></small></td></tr>
+        <tr><td>Queue / Deque</td><td><code>std::deque</code></td><td>Double-ended queue. Good for BFS and custom queues. <br><small><code>push_back()</code>, <code>pop_front()</code></small></td></tr>
+        <tr><td>Map</td><td><code>std::unordered_map</code></td><td>O(1) average lookups. Hash table structure. <br><small><code>m[k] = v</code>, <code>m.count(k)</code>, <code>m.find(k)</code></small></td></tr>
+        <tr><td>Map (Ordered)</td><td><code>std::map</code></td><td>O(log n) lookup. Sorted red-black tree. <br><small>Iterate keys in ascending order.</small></td></tr>
+        <tr><td>Set</td><td><code>std::unordered_set</code></td><td>O(1) hash set. Unique values. <br><small><code>insert(x)</code>, <code>count(x)</code>, <code>erase(x)</code></small></td></tr>
+        <tr><td>PriorityQueue</td><td><code>std::priority_queue</code></td><td>Max-Heap by default. Use <code>greater&lt;T&gt;</code> for Min-Heap. <br><small><code>push(x)</code>, <code>pop()</code>, <code>top()</code></small></td></tr>
+      </table>
+    `;
+  }
+  cardEl.innerHTML = html;
+}
+
+</script>
+
+<!-- NOTE MODAL -->
+<div class="modal-overlay" id="noteModal">
+  <div class="modal">
+    <h3 id="noteModalTitle">Problem Note</h3>
+    <textarea id="noteInput" placeholder="Write your approach or insights here..."></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeNoteModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveNote()">Save Note</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- STATS MODAL -->
+<div class="modal-overlay" id="statsModal">
+  <div class="modal" style="max-width: 400px;">
+    <h3>Your Activity</h3>
+    <div class="streak-stat">
+      <h1 id="streakCount">0</h1>
+      <p>Day Streak 🔥</p>
+    </div>
+    <div style="font-size:13px; color:var(--text-muted); margin-bottom: 8px;">Last 14 days</div>
+    <div class="heatmap-grid" id="heatmapGrid"></div>
+    <div class="modal-actions" style="margin-top: 24px;">
+      <button class="btn btn-primary" onclick="document.getElementById('statsModal').style.display='none'">Close</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
