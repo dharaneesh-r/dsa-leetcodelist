@@ -1,0 +1,41 @@
+{
+  "name": "DSA Coding Interview Roadmap",
+  "short_name": "DSA Roadmap",
+  "description": "300+ LeetCode problems organized by pattern with multi-language templates, progress tracking, spaced repetition, and offline support.",
+  "start_url": "./dsaSheet.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0c10",
+  "theme_color": "#f97316",
+  "categories": ["education", "productivity"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='40' fill='%23f97316'/><text x='96' y='130' font-size='110' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-weight='bold'>D</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='100' fill='%23f97316'/><text x='256' y='350' font-size='300' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-weight='bold'>D</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Random Problem",
+      "short_name": "Random",
+      "description": "Pick a random unsolved problem",
+      "url": "./dsaSheet.html#problems"
+    },
+    {
+      "name": "View Cheat Sheets",
+      "short_name": "Cheats",
+      "url": "./dsaSheet.html#cheatsheets"
+    }
+  ]
+}
