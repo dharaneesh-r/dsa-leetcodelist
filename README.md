@@ -2,7 +2,7 @@
 
 > 300+ curated LeetCode problems organized by pattern. Multi-language code templates, progress tracking, spaced repetition, and offline support — all in a single HTML file.
 
-🔗 **Live site:** [https://dharaneesh-r.github.io/dsa-roadmap/](https://dharaneesh-r.github.io/dsa-roadmap/)
+🔗 **Live site:** [DSA LEETCODELIST](https://dharaneesh-r.github.io/dsa-leetcodelist/)
 
 ---
 
